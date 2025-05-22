@@ -1,0 +1,114 @@
+@layer layout {
+  /* 🟦 ハンバーガーの外枠ボタン */
+  .navToggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 40px;
+    height: 85px;
+    position: fixed;
+    top: 1rem;
+    left: 1rem; /* ← 左に出したい場合は left、右なら right に変更 */
+    z-index: 10001;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* 🟨 横線3本 */
+  .bar {
+    width: 24px;
+    height: 2px;
+    background-color: var(--text);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .open1 {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .open2 {
+    opacity: 0;
+  }
+
+  .open3 {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* 🧩 既存構造も残して拡張しておく（必要に応じて併用可能） */
+  .toggle {
+    --offset: var(--spaceXS);
+    --inset: calc(var(--spaceOuter) - var(--offset));
+
+    position: fixed;
+    top: var(--inset);
+    right: var(--inset);
+    z-index: var(--zIndex4);
+    display: none;
+
+    @media (--mediaMobile), (--mediaMobileLS) {
+      display: flex;
+    }
+  }
+
+  .inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .navToggle {
+      display: flex; /* ← モバイルのときだけ表示 */
+    }
+  }
+
+  .icon {
+    --iconSize: var(--spaceXL);
+
+    position: absolute;
+    transition-property: opacity, fill;
+    transition-duration: var(--durationM);
+    transition-timing-function: var(--bezierFastoutSlowin);
+    opacity: 1;
+    transform: rotate(0deg);
+    fill: var(--textBody);
+    width: var(--iconSize);
+    height: var(--iconSize);
+
+    @media (--mediaUseMotion) {
+      transition-delay: 0.1s;
+      transition-property: opacity, transform, fill;
+    }
+
+    &[data-open='true'] {
+      opacity: 0;
+
+      @media (--mediaUseMotion) {
+        transition-delay: 0s;
+        transform: rotate(45deg);
+      }
+    }
+
+    &[data-close='true'] {
+      opacity: 0;
+
+      @media (--mediaUseMotion) {
+        transition-delay: 0s;
+        transform: rotate(-45deg);
+      }
+    }
+
+    &[data-open='true']&[data-close='true'] {
+      opacity: 1;
+
+      @media (--mediaUseMotion) {
+        transition-delay: 0.1s;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}

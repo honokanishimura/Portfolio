@@ -1,0 +1,16 @@
+{
+  "short_name": "Honoka Nishimura",
+  "name": "Honoka Nishimura",
+  "icons": [
+    {
+      "src": "icon-256.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+   
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#111111",
+  "background_color": "#111111"
+}

@@ -1,0 +1,171 @@
+@layer layout {
+  .navbar {
+    position: fixed;
+    top: var(--spaceOuter);
+    left: var(--spaceOuter);
+    width: var(--space2XL);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    background: transparent !important;
+    color: var(--text);
+    padding: var(--spaceM) 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow: visible;
+  }
+
+  :root[data-theme='dark'] .navbar {
+    background-color: #111;
+    color: #eee;
+  }
+
+  :root[data-theme='light'] .navbar {
+    background-color: #f2f2f2;
+    color: #111;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spaceL);
+    flex: 1 1 auto;
+  }
+
+  .navList {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    display: flex;
+    flex-direction: row-reverse;
+    gap: var(--spaceXL);
+    margin-bottom: 10rem;
+  }
+
+  .navLink {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+  }
+
+  .navLink:hover,
+  .navLink[aria-current='page'] {
+    color: var(--accent);
+  }
+
+  .navIcons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spaceL);
+  }
+
+  .navIconLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+  }
+
+  .navIconLink:hover {
+    color: var(--accent);
+  }
+
+  .navIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+  }
+
+  .themeToggleWrapper {
+    margin-top: auto;
+    padding-top: var(--spaceL);
+  }
+
+  .navFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spaceL);
+    margin-top: auto;
+    padding-bottom: var(--spaceM);
+    transform: translateY(-2rem);
+  }
+
+  /* 📱 モバイルナビ本体 */
+  .mobileNav {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s ease;
+  }
+
+  .mobileNav[data-visible='true'] {
+    right: 0;
+  }
+
+  .mobileNavLink {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white; /* ← ✅ テキスト白 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .mobileNavLink:hover {
+    color: var(--accent);
+  }
+
+  .mobileNavIcons {
+    display: flex;
+    flex-direction: row; /* ← ✅ 横並び */
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .mobileNavToggleWrapper {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navIconLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);  }
+
+  .navIconLink:hover {
+    color: var(--accent);
+  }
+
+  .navIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+  }
+}
+/* ✅ ハンバーガーメニューが開いているときにサイドバーの縦書きリンクを非表示 */
+@media (max-width: 768px) {
+  .navList {
+    display: none !important;
+  }
+
+  .navFooter {
+    display: none !important;
+  }
+}
