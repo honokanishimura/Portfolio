@@ -112,17 +112,14 @@
   box-shadow: none;
 }
 @media (max-width: 768px) {
-  #final-image {
-    height: 30vh; /* ← 全体の高さを適度に保ちつつ圧縮 */
-    background-size: cover; /* ← 見栄え良く画面をカバー */
-    background-position: center;
+  .fullscreenImage {
+    object-fit: contain !important;
+    height: 30vh !important;
   }
 
-  .fullscreenImage {
-    height: 50%;
-    object-fit: contain; /* ← はみ出し防止 */
-    object-position: center;
-    width: 50%;
+  #final-image {
+    height: 30vh; /* ✅ 100vh → 少し小さくする */
+    background-size: contain
   }
 }
 .image-trim-fix {
