@@ -44,7 +44,7 @@
   font-size: 1.1rem !important;
   line-height: 1.75 !important;
   padding: 0 !important;
-  margin: 0 0 1.6rem 0 !important;
+  margin: 2rem 0 1.6rem 0 !important; 
   text-align: left !important;
   word-break: break-word;
 }
@@ -61,6 +61,7 @@
   border-radius: 0 !important;
   box-shadow: none !important;
   margin-top: 2.5rem !important;
+  margin-bottom: 2rem !important;
   transition: opacity 0.5s ease-in-out;
 }
 
