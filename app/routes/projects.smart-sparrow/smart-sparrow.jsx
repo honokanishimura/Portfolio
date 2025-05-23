@@ -165,25 +165,59 @@ export const SmartSparrow = () => {
         </ProjectSection>
 
         <ProjectSection light={isDark}>
-  <ProjectSectionContent>
-    <div
-      id="final-image"
-      style={{
-        backgroundImage: `url(${isDark ? imageSprLessonBuilderDark : imageSprLessonBuilderLight})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        width: '100%',
-        maxWidth: '480px',
-        aspectRatio: '1024 / 800',
-        margin: '0 auto',
-        backgroundColor: '#f2f2f2',
-        overflow: 'hidden',
-      }}
-    />
-  </ProjectSectionContent>
-</ProjectSection>
+          <ProjectSectionContent>
 
+          <div
+  className="image-background"
+  style={{
+    width: '100%',
+    maxWidth: '480px',
+    height: 'auto',
+    aspectRatio: '1024 / 800', // ✅ 比率固定（optional）
+    margin: '0 auto',
+    backgroundImage: `url(${isDark ? imageSprLessonBuilderDark : imageSprLessonBuilderLight})`,
+    backgroundSize: 'cover',         // ✅ 必要に応じて 'contain' にも
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: '#f2f2f2',      // ✅ 読み込み前の背景色
+    borderRadius: '0',
+    boxShadow: 'none',
+  }}
+/>
+
+
+
+
+
+
+ 
+
+            <motion.div
+              className={`${styles.projectTextRow} ${styles.accountTextBlock}`}
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <ProjectSectionHeading className={styles.projectHeading}>
+              Form & State: Account
+
+              </ProjectSectionHeading>
+              <ProjectSectionText className={styles.projectText}>
+                Implemented user authentication, registration, and profile editing features using React and TypeScript.
+              </ProjectSectionText>
+              <ProjectSectionText className={styles.projectText}>
+                Utilized <code>react-hook-form</code> for streamlined form validation, error handling, and default value management.
+              </ProjectSectionText>
+              <ProjectSectionText className={styles.projectText}>
+                Global authentication state was managed via Context API, enabling conditional UI rendering and route protection.
+              </ProjectSectionText>
+              <ProjectSectionText className={styles.projectText}>
+                Enabled real-time editing of payment and shipping information with a flexible and responsive form UI.
+              </ProjectSectionText>
+            </motion.div>
+          </ProjectSectionContent>
+        </ProjectSection>
         </ProjectContainer>
 
         <div
