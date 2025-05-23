@@ -166,27 +166,24 @@ export const SmartSparrow = () => {
 
         <ProjectSection light={isDark}>
           <ProjectSectionContent>
-            <motion.div
-              initial={{ y: 80, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Image
-                key={theme}
-                className="image-trim-fix"
-                srcSet={
-                  isDark
-                    ? `${imageSprLessonBuilderDark} 1024w, ${imageSprLessonBuilderDarkLarge} 2048w`
-                    : `${imageSprLessonBuilderLight} 1024w, ${imageSprLessonBuilderLightLarge} 2048w`
-                }
-                width={1024}
-                height={800}
-                alt={`A set of ${theme} themed components for the aero design system`}
-                sizes="100vw"
-                style={{ backgroundColor: '#f2f2f2' }}
-              />
-            </motion.div>
+
+          <div>
+         <Image
+         key={theme}
+         className="image-trim-fix"
+    srcSet={
+      isDark
+        ? `${imageSprLessonBuilderDark} 1024w, ${imageSprLessonBuilderDarkLarge} 2048w`
+        : `${imageSprLessonBuilderLight} 1024w, ${imageSprLessonBuilderLightLarge} 2048w`
+    }
+    width={1024}
+    height={800}
+    alt={`A set of ${theme} themed components for the aero design system`}
+    sizes="100vw"
+  />
+</div>
+
+ 
 
             <motion.div
               className={`${styles.projectTextRow} ${styles.accountTextBlock}`}

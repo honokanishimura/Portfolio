@@ -123,7 +123,7 @@
   }
 }
 .image-trim-fix {
-  background-color: #f2f2f2 !important; /* ✅ これだけでOK */
+  background-color: transparent !important;
   object-fit: contain !important;
   box-shadow: none !important;
   display: block !important;
