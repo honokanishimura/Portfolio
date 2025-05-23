@@ -118,27 +118,26 @@ export const SmartSparrow = () => {
           </ProjectSectionContent>
         </ProjectSection>
 
-        <ProjectSection light={isDark}>
+        <ProjectSection padding="top">
           <ProjectSectionContent>
-          <div
-  id="final-image"
-  style={{
-    width: '85vw',
-    height: '90vh',
-    margin: '0 auto',
-    padding: 0,
-    overflow: 'hidden',
-    backgroundImage: `url(${
-      isDark ? imageSprLessonBuilderDarkLarge : imageSprLessonBuilderLightLarge
-    })`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundColor: '#e0e0e0',
-    transition: 'opacity 0.5s ease-in-out',
-  }}
-/>
-
+          <ProjectImage
+              raised
+              key={theme}
+              srcSet={
+                isDark
+                  ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
+                  : `${imageSprLessonBuilderLight} 1280w, ${imageSprLessonBuilderLightLarge} 2560w`
+              }
+              width={1280}
+              height={800}
+              placeholder={
+                isDark
+                  ? imageSprLessonBuilderDarkPlaceholder
+                  : imageSprLessonBuilderLightPlaceholder
+              }
+              sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
+              alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
+            />
 
             <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
