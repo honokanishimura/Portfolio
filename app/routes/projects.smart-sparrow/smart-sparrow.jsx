@@ -54,7 +54,11 @@ export const SmartSparrow = () => {
   const isDark = theme === 'dark';
   const [bgLoaded, setBgLoaded] = useState(false);
 
- 
+  useEffect(() => {
+    const preloadImg = new window.Image();
+    preloadImg.src = backgroundSpr;
+    preloadImg.onload = () => setBgLoaded(true);
+  }, []);
 
   
 
@@ -80,7 +84,7 @@ export const SmartSparrow = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
-              key={theme}
+              
               className="image-trim-fix"
               srcSet={
                 isDark
