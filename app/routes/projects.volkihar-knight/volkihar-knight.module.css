@@ -103,6 +103,20 @@
   display: block;
   box-shadow: none;
 }
+.imageTrimFix {
+  display: block;
+  width: 100%;
+  max-width: 960px;         /* ✅ SmartSparrowと揃える */
+  aspect-ratio: 16 / 7;     /* ✅ 横長にする（16/6〜16/8でもOK） */
+  object-fit: cover;
+  object-position: center;
+  margin: 0 auto 2.5rem auto; /* ✅ 中央寄せ＆下余白 */
+  border-radius: 0;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
 
 @media (max-width: 768px) {
   .fullscreenImage {
@@ -110,8 +124,10 @@
     height: 30vh !important;
   }
 
-  #final-image {
-    height: 30vh;
-    background-size: contain;
+  .imageTrimFix {
+    aspect-ratio: 16 / 9;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
   }
 }

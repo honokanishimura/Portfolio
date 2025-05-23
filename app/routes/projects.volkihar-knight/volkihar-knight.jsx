@@ -152,20 +152,16 @@ export function VolkiharKnight() {
       </ProjectContainer>
 
       {/* Fullscreen Image */}
-      <div
-        id="final-image"
-        style={{
-          width: '90vw',
-          height: '90vh',
-          margin: 0,
-          padding: 0,
-          overflow: 'hidden',
-          backgroundImage: `url(${WahaAll})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
+      <ProjectSection>
+  <ProjectSectionContent>
+    <img
+      src={WahaAll}
+      alt="Waha Screens"
+      className={styles.imageTrimFix}
+    />
+  </ProjectSectionContent>
+</ProjectSection>
+
 
       <Footer />
     </Fragment>
