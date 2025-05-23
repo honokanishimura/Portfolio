@@ -43,6 +43,7 @@ const roles = [
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export function VolkiharKnight() {
+  
 
   return (
     <Fragment>
@@ -152,16 +153,20 @@ export function VolkiharKnight() {
       </ProjectContainer>
 
       {/* Fullscreen Image */}
-      <ProjectSection>
-  <ProjectSectionContent>
-    <img
-      src={WahaAll}
-      alt="Waha Screens"
-      className={styles.imageTrimFix}
-    />
-  </ProjectSectionContent>
-</ProjectSection>
-
+      <div
+        id="final-image"
+        style={{
+          width: '100vw',
+          height: '90vh',
+          margin: 0,
+          padding: 0,
+          overflow: 'hidden',
+          backgroundImage: `url(${WahaAll})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
 
       <Footer />
     </Fragment>
