@@ -27,9 +27,9 @@ import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
 import imageSprLessonBuilderDark from '~/assets/Hyo-desktop.png';
 import imageSprLessonBuilderDarkLarge from '~/assets/Hyo-desktop.png';
 import imageSprLessonBuilderDarkPlaceholder from '~/assets/Hyo-desktop.png';
-import imageSprLessonBuilderLight from '~/assets/Hyo-desktop.png';
-import imageSprLessonBuilderLightLarge from '~/assets/Hyo-desktop.png';
-import imageSprLessonBuilderLightPlaceholder from '~/assets/Hyo-desktop.png';
+import imageSprLessonBuilderLight from '~/assets/Hyo-desktop-light.png';
+import imageSprLessonBuilderLightLarge from '~/assets/Hyo-desktop-light.png';
+import imageSprLessonBuilderLightPlaceholder from '~/assets/Hyo-desktop-light.png';
 
 import imageSprComponentsDark from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsDarkLarge from '~/assets/Hyo-ramdom-mobo.png';
@@ -166,24 +166,26 @@ export const SmartSparrow = () => {
 
         <ProjectSection light={isDark}>
           <ProjectSectionContent>
-          <div
-      className="project-image-background"
-      style={{
-        width: '100%',
-        maxWidth: '480px',
-        aspectRatio: '1024 / 800',
-        margin: '0 auto',
-        backgroundImage: `url(${
-          isDark ? imageSprLessonBuilderDark : imageSprLessonBuilderLight
-        })`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundColor: '#f2f2f2',
-        borderRadius: '0',
-        overflow: 'hidden',
-      }}
-      />
+            <motion.div
+              initial={{ y: 80, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                key={theme}
+                className="image-trim-fix"
+                srcSet={
+                  isDark
+                    ? `${imageSprLessonBuilderDark} 1024w, ${imageSprLessonBuilderDarkLarge} 2048w`
+                    : `${imageSprLessonBuilderLight} 1024w, ${imageSprLessonBuilderLightLarge} 2048w`
+                }
+                width={1024}
+                height={800}
+                alt={`A set of ${theme} themed components for the aero design system`}
+                sizes="100vw"
+              />
+            </motion.div>
 
             <motion.div
               className={`${styles.projectTextRow} ${styles.accountTextBlock}`}

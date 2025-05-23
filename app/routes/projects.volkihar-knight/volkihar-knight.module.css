@@ -5,7 +5,7 @@
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
-  border-radius: 12px;
+  border-radius: 0; /* ✅ 丸み削除 */
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.1);
@@ -18,11 +18,10 @@
   flex-direction: column;
   align-items: flex-start;
   text-align: left;
-
-  max-width: 960px;     /* ✅ ここで行の長さを制御 */
+  max-width: 960px;
   width: 100%;
-  margin: 0 auto;       /* ✅ 中央に配置 */
-  padding: 0 2rem;      /* ✅ スマホでも余白確保 */
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* 🔠 セクションタイトル */
@@ -37,7 +36,7 @@
 
 /* 📝 テキスト本文 */
 .projectText {
-  max-width: 100%px;
+  max-width: 100%;
   width: 100%;
   font-size: 1.1rem;
   line-height: 1.75;
@@ -46,12 +45,6 @@
   word-break: break-word;
   text-align: left;
 }
-
-.projectSectionContent {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 
 /* 🌗 ダーク/ライトモード対応 */
 [data-theme='light'] .projectText {
@@ -62,33 +55,29 @@
   color: #eaeaea;
 }
 
-/* 💻 PC：テキストと画像を横並びに */
+/* 💻 PC時（横並び用） */
 @media (min-width: 769px) {
- 
-
- 
-
   .mockFrameWrapper {
-    width: 50%;
+    width: 45%; /* ✅ 少し狭める */
     height: auto;
   }
 
   .mockFrameImage {
-    max-height: 500px;
+    max-height: 580px; /* ✅ 縦少し長めに */
     width: 100%;
     height: auto;
     object-fit: contain;
     object-position: center;
     display: block;
-    position: relative; /* 🔧 修正済：absolute → relative */
+    position: relative;
+    border-radius: 0; /* ✅ 丸み削除 */
   }
 }
 
 /* 📱 モバイル対応 */
 .mockFrameWrapper {
   width: 100%;
-  max-width: 1200px;
-  border-radius: 20px;
+  max-width: 100%;
   overflow: hidden;
   box-shadow:
     0 16px 40px rgba(0, 0, 0, 0.25),
@@ -96,17 +85,16 @@
 }
 
 .mockFrameImage {
-  max-height: 720px;
-  width: 120%;
+  max-height: 460px; /* ✅ モバイル時の高さも調整 */
+  width: 100%;       /* ✅ 横幅を自然に戻す */
   height: auto;
   object-fit: contain;
   display: block;
   position: relative;
-  border-radius: 50px;
-  
+  border-radius: 0; /* ✅ 丸み削除 */
 }
 
-/* 🖼️ Fullscreen画像（モバイル時調整） */
+/* 🖼️ フルスクリーン画像用（モバイル調整） */
 .fullscreenImage {
   width: 100%;
   height: 50%;
@@ -123,7 +111,7 @@
   }
 
   #final-image {
-    height: 30vh; /* ✅ 100vh → 少し小さくする */
-    background-size: contain
+    height: 30vh;
+    background-size: contain;
   }
 }

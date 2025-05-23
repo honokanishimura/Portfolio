@@ -111,41 +111,25 @@
   display: block;
   box-shadow: none;
 }
-
 @media (max-width: 768px) {
-  .image-trim-fix {
-    width: 100% !important;
-    max-width: 70vw !important;       /* ✅ 横幅は画面の90%に収める */
-    max-height: 25vh !important;      /* ✅ 高さは画面の35%程度に制限 */
+  .fullscreenImage {
     object-fit: contain !important;
+    height: 30vh !important;
   }
 
   #final-image {
-    height: auto;
-    max-height: 35vh;
-    background-size: contain;
+    height: 30vh; /* ✅ 100vh → 少し小さくする */
+    background-size: contain
   }
 }
-
-.project-image-background {
-  width: 100%;
-  max-width: 480px;
-  aspect-ratio: 1024 / 800;
-  margin: 0 auto;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #f2f2f2;
-  border-radius: 0;
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  .project-image-background {
-    max-width: 90vw;
-    max-height: 35vh;
-    background-size: contain;
-  }
+.image-trim-fix {
+  background-color: transparent !important;
+  object-fit: cover !important;
+  box-shadow: none !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 0 !important;
 }
 
 
