@@ -106,8 +106,8 @@
 .imageTrimFix {
   display: block;
   width: 100%;
-  max-width: 960px;         /* ✅ SmartSparrowと揃える */
-  aspect-ratio: 16 / 7;     /* ✅ 横長にする（16/6〜16/8でもOK） */
+  max-width: 1400px;         /* ✅ SmartSparrowと揃える */
+  aspect-ratio: 16 / 12;     /* ✅ 横長にする（16/6〜16/8でもOK） */
   object-fit: cover;
   object-position: center;
   margin: 0 auto 2.5rem auto; /* ✅ 中央寄せ＆下余白 */
