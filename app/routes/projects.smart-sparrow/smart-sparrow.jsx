@@ -50,19 +50,25 @@ const roles = [
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export const SmartSparrow = () => {
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+  const [bgLoaded, setBgLoaded] = useState(false);
+
  
+
   
 
   return (
     <>
       <ProjectContainer>
+        {bgLoaded && (
           <ProjectBackground
             opacity={isDark ? 0.75 : 0.8}
             src={backgroundSpr}
             srcSet={`${backgroundSpr} 1080w, ${backgroundSprLarge} 2160w`}
             placeholder={backgroundSprPlaceholder}
           />
-        
+        )}
 
         <ProjectHeader
           title={title}
