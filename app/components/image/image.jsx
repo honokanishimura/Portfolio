@@ -81,7 +81,7 @@ const ImageElements = ({
   const placeholderRef = useRef();
   const videoRef = useRef();
   const isVideo = getIsVideo(src);
-  const showFullRes = true;
+  const showFullRes = inViewport;
   const hasMounted = useHasMounted();
 
   useEffect(() => {
