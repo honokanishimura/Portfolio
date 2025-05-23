@@ -127,14 +127,25 @@
   }
 }
 
-.image-trim-fix {
-  background-color: transparent !important;
-  object-fit: contain !important;
-  width: 100% !important;
-  max-width: 480px !important;   /* ✅ 画像が大きすぎないよう制限 */
-  height: auto !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
+.project-image-background {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 1024 / 800;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .project-image-background {
+    max-width: 90vw;
+    max-height: 35vh;
+    background-size: contain;
+  }
 }
 
 
