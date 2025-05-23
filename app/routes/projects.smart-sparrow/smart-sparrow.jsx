@@ -56,14 +56,13 @@ export const SmartSparrow = () => {
   return (
     <>
       <ProjectContainer>
-        {bgLoaded && (
           <ProjectBackground
             opacity={isDark ? 0.75 : 0.8}
             src={backgroundSpr}
             srcSet={`${backgroundSpr} 1080w, ${backgroundSprLarge} 2160w`}
             placeholder={backgroundSprPlaceholder}
           />
-        )}
+        
 
         <ProjectHeader
           title={title}
