@@ -110,7 +110,7 @@ export const SmartSparrow = () => {
         </ProjectSection>
 
         {/* Section: 1 */}
-        <ProjectSection>
+        <ProjectSection padding="none">
           <ProjectSectionContent>
             <div className={styles.projectTextRow}>
               <ProjectSectionHeading className={styles.projectHeading}>
@@ -130,7 +130,7 @@ export const SmartSparrow = () => {
         </ProjectSection>
 
         {/* Section: 2 */}
-        <ProjectSection padding="top">
+        <ProjectSection padding="none">
           <ProjectSectionContent>
             <ProjectImage
               className="image-trim-fix"
