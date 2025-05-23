@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    background: transparent !important;
+    background-color: var(--background);
     color: var(--text);
     padding: var(--spaceM) 0;
     transition: background-color 0.3s ease, color 0.3s ease;
