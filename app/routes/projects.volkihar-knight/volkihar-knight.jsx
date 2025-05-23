@@ -184,8 +184,8 @@ export function VolkiharKnight() {
       <div
         id="final-image"
         style={{
-          width: '100vw',
-          height: '100vh',
+          width: '85vw',
+          height: '90vh',
           margin: 0,
           padding: 0,
           overflow: 'hidden',

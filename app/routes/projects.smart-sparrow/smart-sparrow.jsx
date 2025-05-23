@@ -178,7 +178,7 @@ export const SmartSparrow = () => {
         id="final-image"
         style={{
           width: '85vw',
-          height: '100vh',
+          height: '90vh',
           margin: '0 auto',
 
           padding: 0,
