@@ -43,35 +43,6 @@ const roles = [
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export function VolkiharKnight() {
-  useEffect(() => {
-    const navbar = document.querySelector('header');
-    const target = document.querySelector('#final-image');
-
-    if (!target) {
-      if (navbar) navbar.style.display = '';
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          navbar.style.display = 'none';
-        } else {
-          navbar.style.display = '';
-        }
-      },
-      { threshold: 0.8 }
-    );
-
-    observer.observe(target);
-
-    return () => {
-      observer.disconnect();
-      if (navbar) {
-        navbar.style.display = '';
-      }
-    };
-  }, []);
 
   return (
     <Fragment>
