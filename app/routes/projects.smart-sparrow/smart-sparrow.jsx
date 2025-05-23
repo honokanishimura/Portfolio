@@ -40,7 +40,6 @@ import imageSprComponentsDark from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsDarkLarge from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsLight from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsLightLarge from '~/assets/Hyo-ramdom-mobo.png';
-
 import imageSprDesignSystemDark from '~/assets/Hyo-all.png';
 
 const title = 'React-Based Furniture E-Commerce Platform';
@@ -168,20 +167,21 @@ export const SmartSparrow = () => {
       </ProjectContainer>
 
       {/* Final */}
-      <div
-        id="final-image"
-        style={{
-          width: '100vw',
-          height: '100vh',
-          margin: '0 auto',
-          padding: 0,
-          overflow: 'hidden',
-          backgroundImage: `url(${imageSprDesignSystemDark})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
+            <Image
+              className="image-trim-fix"
+
+              key={theme}
+              srcSet={
+                isDark
+                  ? `${imageSprDesignSystemDark} 1280w, ${imageSprComponentsDarkLarge} 2560w`
+                  : `${imageSprDesignSystemDark} 1280w, ${imageSprComponentsDarkLarge} 2560w`
+              }
+              width={1280}
+              height={800}
+            
+              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+            />
 
       {/* Footer */}
       <Footer />

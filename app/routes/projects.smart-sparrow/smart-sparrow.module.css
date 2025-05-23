@@ -107,8 +107,5 @@
     object-fit: contain !important;
   }
 
-  #final-image {
-    height: 10vh;
-    background-size: contain;
-  }
+ 
 }
