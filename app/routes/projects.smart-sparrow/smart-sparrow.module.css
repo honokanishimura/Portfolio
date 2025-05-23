@@ -63,6 +63,20 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+.image-trim-fix-wide {
+  display: block !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 1000px !important; /* ✅ お好みで 960px～1280px くらいまで調整可 */
+  height: auto !important;
+  object-fit: cover !important;
+  background-color: #e0e0e0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
 /* ===== Section padding tweak ===== */
 .projectSectionContent {
   margin-bottom: 0.5rem !important;
