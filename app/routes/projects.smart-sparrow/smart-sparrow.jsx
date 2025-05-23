@@ -165,21 +165,23 @@ export const SmartSparrow = () => {
       </ProjectContainer>
 
       {/* Final */}
-            <Image
-              className="image-trim-fix"
+      <ProjectSection padding="none">
+  <ProjectSectionContent>
+    <ProjectImage
+      className="image-trim-fix"
+      srcSet={
+        isDark
+          ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
+          : `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
+      }
+      width={1280}
+      height={800}
+      alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+      sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+    />
+  </ProjectSectionContent>
+</ProjectSection>
 
-              key={theme}
-              srcSet={
-                isDark
-                  ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
-                  : `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
-              }
-              width={1280}
-              height={800}
-            
-              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-            />
 
       {/* Footer */}
       <Footer />
