@@ -132,8 +132,8 @@ export const SmartSparrow = () => {
               height={800}
               placeholder={
                 isDark
-                  ? imageSprLessonBuilderDarkPlaceholder
-                  : imageSprLessonBuilderLightPlaceholder
+                  ? imageSprLessonBuilderDark
+                  : imageSprLessonBuilderLight
               }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
