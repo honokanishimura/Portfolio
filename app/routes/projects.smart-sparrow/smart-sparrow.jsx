@@ -50,16 +50,7 @@ const roles = [
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export const SmartSparrow = () => {
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
-  const [bgLoaded, setBgLoaded] = useState(false);
-
-  useEffect(() => {
-    const preloadImg = new window.Image();
-    preloadImg.src = backgroundSpr;
-    preloadImg.onload = () => setBgLoaded(true);
-  }, []);
-
+ 
   
 
   return (
