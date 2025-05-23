@@ -88,7 +88,7 @@ export const SmartSparrow = () => {
         />
 
         {/* Section: Hero UI image (product listing) */}
-        <ProjectSection padding="top">
+        <ProjectSection padding="none">
           <ProjectSectionContent>
             <ProjectImage
               className="image-trim-fix"
@@ -103,23 +103,16 @@ export const SmartSparrow = () => {
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Furniture product UI"
             />
-          </ProjectSectionContent>
-        </ProjectSection>
-
-        {/* Section: 1 */}
-        <ProjectSection padding="none">
-          <ProjectSectionContent>
-            <div className={styles.projectTextRow}>
+      
+          <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-                Purchase UX Improvements
+                Form & State: Account
               </ProjectSectionHeading>
+
+
               <ProjectSectionText className={styles.projectText}>
                 Many traditional furniture e-commerce platforms suffer from fragmented navigation and inconsistent UI patterns, leading to user drop-off despite high purchase intent.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
                 This project redesigned the end-to-end purchase flow—from product detail pages to the final checkout—using React and TypeScript to ensure a modular, maintainable architecture.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
                 Emphasis was placed on improving UX clarity, implementing robust state management, and delivering a seamless, frustration-free shopping experience.
               </ProjectSectionText>
             </div>
