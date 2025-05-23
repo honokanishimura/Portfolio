@@ -27,9 +27,9 @@ import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
 import imageSprLessonBuilderDark from '~/assets/Hyo-desktop.png';
 import imageSprLessonBuilderDarkLarge from '~/assets/Hyo-desktop.png';
 import imageSprLessonBuilderDarkPlaceholder from '~/assets/Hyo-desktop.png';
-import imageSprLessonBuilderLight from '~/assets/Hyo-desktop-light.png';
-import imageSprLessonBuilderLightLarge from '~/assets/Hyo-desktop-light.png';
-import imageSprLessonBuilderLightPlaceholder from '~/assets/Hyo-desktop-light.png';
+import imageSprLessonBuilderLight from '~/assets/Hyo-desktop.png';
+import imageSprLessonBuilderLightLarge from '~/assets/Hyo-desktop.png';
+import imageSprLessonBuilderLightPlaceholder from '~/assets/Hyo-desktop.png';
 
 import imageSprComponentsDark from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsDarkLarge from '~/assets/Hyo-ramdom-mobo.png';
