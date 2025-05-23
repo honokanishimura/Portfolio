@@ -174,8 +174,14 @@ export const SmartSparrow = () => {
         </ProjectSection>
       </ProjectContainer>
 
-      <div id="final-image" className="final-image"
-      />
+      <div
+  id="final-image"
+  className="final-image"
+  style={{
+    backgroundImage: `url(${imageSprDesignSystemDark})` // ✅ これが効くように戻す
+  }}
+/>
+
       <Footer />
     </>
   );

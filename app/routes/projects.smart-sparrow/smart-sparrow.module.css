@@ -86,7 +86,6 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: url('/assets/Hyo-all.png'); /* 🔁 ← public/assets に配置想定 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
