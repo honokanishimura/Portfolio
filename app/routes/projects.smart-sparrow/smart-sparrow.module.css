@@ -46,7 +46,6 @@
   word-break: break-word;
 }
 
-/* ===== テーマカラー調整 ===== */
 :root[data-theme='light'] .projectHeading,
 :root[data-theme='light'] .projectText {
   color: #2e2e2e !important;
@@ -70,37 +69,23 @@
   display: block !important;
   width: 100% !important;
   max-width: 100% !important;
-  height: 400px !important;
+  height: 400px !important; /* ✅ 高さを確保（見た目の安定性） */
   object-fit: cover !important;
-  background-color: #e0e0e0 !important;
+  background-color: #e0e0e0 !important; /* ✅ 読み込み前の背景色 */
   border-radius: 0 !important;
   box-shadow: none !important;
   transition: opacity 0.5s ease-in-out;
 }
 
-/* ===== 最後の背景画像（#final-image） ===== */
-#final-image,
-.final-image {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* ===== モバイル調整（高さを抑える） ===== */
+/* ===== モバイル調整（高さを少し抑える）===== */
 @media (max-width: 768px) {
   .image-trim-fix {
     height: 150px !important;
     object-fit: contain !important;
   }
 
-  #final-image,
-  .final-image {
-    height: 15vh !important;
+  #final-image {
+    height: 15vh;
     background-size: contain;
   }
 }
