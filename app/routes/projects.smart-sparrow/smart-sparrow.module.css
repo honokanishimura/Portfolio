@@ -111,25 +111,32 @@
   display: block;
   box-shadow: none;
 }
+
 @media (max-width: 768px) {
-  .fullscreenImage {
+  .image-trim-fix {
+    width: 100% !important;
+    max-width: 80vw !important;       /* ✅ 横幅は画面の90%に収める */
+    max-height: 35vh !important;      /* ✅ 高さは画面の35%程度に制限 */
     object-fit: contain !important;
-    height: 30vh !important;
   }
 
   #final-image {
-    height: 30vh; /* ✅ 100vh → 少し小さくする */
-    background-size: contain
+    height: auto;
+    max-height: 35vh;
+    background-size: contain;
   }
 }
+
 .image-trim-fix {
-  background-color: transparent !important;
-  object-fit: contain !important;
-  box-shadow: none !important;
   display: block !important;
+  margin: 0 auto;
+  background-color: #f2f2f2 !important; /* ✅ 背景を白に近いグレーにして違和感を減らす */
+  object-fit: cover !important;         /* ✅ contain → cover に変更して余白をなくす */
   width: 100% !important;
+  max-width: 480px !important;
   height: auto !important;
   border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 
