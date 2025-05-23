@@ -115,8 +115,8 @@
 @media (max-width: 768px) {
   .image-trim-fix {
     width: 100% !important;
-    max-width: 80vw !important;       /* ✅ 横幅は画面の90%に収める */
-    max-height: 35vh !important;      /* ✅ 高さは画面の35%程度に制限 */
+    max-width: 70vw !important;       /* ✅ 横幅は画面の90%に収める */
+    max-height: 25vh !important;      /* ✅ 高さは画面の35%程度に制限 */
     object-fit: contain !important;
   }
 
@@ -127,6 +127,15 @@
   }
 }
 
+.image-trim-fix {
+  background-color: transparent !important;
+  object-fit: contain !important;
+  width: 100% !important;
+  max-width: 480px !important;   /* ✅ 画像が大きすぎないよう制限 */
+  height: auto !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
 
 
 
