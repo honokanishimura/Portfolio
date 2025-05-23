@@ -33,74 +33,8 @@ export const Navbar = () => {
   }, [location.pathname, scrollToHash, target]);
 
   useEffect(() => {
-    const navItems = document.querySelectorAll('[data-navbar-item]');
-    const inverseTheme = theme === 'dark' ? 'light' : 'dark';
-    const { innerHeight } = window;
-
-    let inverseMeasurements = [];
-    let navItemMeasurements = [];
-
-    const isOverlap = (rect1, rect2, scrollY) => {
-      return !(rect1.bottom - scrollY < rect2.top || rect1.top - scrollY > rect2.bottom);
-    };
-
-    const resetNavTheme = () => {
-      for (const measurement of navItemMeasurements) {
-        measurement.element.dataset.theme = '';
-      }
-    };
-
-    const handleInversion = () => {
-      const invertedElements = document.querySelectorAll(
-        `[data-theme='${inverseTheme}'][data-invert]`
-      );
-      if (!invertedElements) return;
-
-      inverseMeasurements = Array.from(invertedElements).map(item => ({
-        element: item,
-        top: item.offsetTop,
-        bottom: item.offsetTop + item.offsetHeight,
-      }));
-
-      const { scrollY } = window;
-      resetNavTheme();
-
-      for (const inverseMeasurement of inverseMeasurements) {
-        if (
-          inverseMeasurement.top - scrollY > innerHeight ||
-          inverseMeasurement.bottom - scrollY < 0
-        ) {
-          continue;
-        }
-
-        for (const measurement of navItemMeasurements) {
-          if (isOverlap(inverseMeasurement, measurement, scrollY)) {
-            measurement.element.dataset.theme = inverseTheme;
-          } else {
-            measurement.element.dataset.theme = '';
-          }
-        }
-      }
-    };
-
-    if (theme === 'light') {
-      navItemMeasurements = Array.from(navItems).map(item => {
-        const rect = item.getBoundingClientRect();
-        return {
-          element: item,
-          top: rect.top,
-          bottom: rect.bottom,
-        };
-      });
-
-      document.addEventListener('scroll', handleInversion);
-      handleInversion();
-    }
-
-    return () => {
-      document.removeEventListener('scroll', handleInversion);
-      resetNavTheme();
-    };
+    
+    
   }, [theme, windowSize, location.key]);
 
   const getCurrent = (url = '') => {

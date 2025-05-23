@@ -186,7 +186,7 @@ export function VolkiharKnight() {
         style={{
           width: '85vw',
           height: '90vh',
-          margin: 0,
+          margin: '0 auto',
           padding: 0,
           overflow: 'hidden',
           backgroundImage: `url(${WahaAll})`,
