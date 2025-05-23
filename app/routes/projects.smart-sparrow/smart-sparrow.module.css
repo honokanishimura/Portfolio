@@ -22,7 +22,7 @@
   justify-content: flex-start !important;
   align-items: flex-start !important;
   text-align: left !important;
-  margin: 0 auto !important;
+  margin: 2.5rem auto 0 auto !important; 
   max-width: 880px !important;
   width: 100% !important;
 }
@@ -60,6 +60,7 @@
   background-color: #e0e0e0 !important; 
   border-radius: 0 !important;
   box-shadow: none !important;
+  margin-top: 2.5rem !important;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -101,6 +102,8 @@
 
 .accountTextBlock {
   margin-top: 6rem !important;
+  margin-bottom: 3rem !important; 
+
 }
 
 /* ===== Mobile adjustments ===== */
