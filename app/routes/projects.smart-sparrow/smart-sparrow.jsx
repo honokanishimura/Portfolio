@@ -177,9 +177,10 @@ export const SmartSparrow = () => {
       <div
         id="final-image"
         style={{
-          width: '80vw',
+          width: '60vw',
           height: '80vh',
-          margin: 0,
+          margin: '0 auto',
+
           padding: 0,
           overflow: 'hidden',
           backgroundImage: `url(${imageSprDesignSystemDark})`,
