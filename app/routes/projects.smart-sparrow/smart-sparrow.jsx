@@ -84,7 +84,6 @@ export const SmartSparrow = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
-              
               className="image-trim-fix"
               srcSet={
                 isDark
@@ -121,8 +120,7 @@ export const SmartSparrow = () => {
         <ProjectSection padding="top">
           <ProjectSectionContent>
           <ProjectImage
-              raised
-              key={theme}
+              className="image-trim-fix"
               srcSet={
                 isDark
                   ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
