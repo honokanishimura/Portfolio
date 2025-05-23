@@ -120,20 +120,25 @@ export const SmartSparrow = () => {
 
         <ProjectSection light={isDark}>
           <ProjectSectionContent>
-            <Image
-              key={theme}
-              className="image-trim-fix"
-              srcSet={
-                isDark
-                  ? `${imageSprLessonBuilderDark} 1024w, ${imageSprLessonBuilderDarkLarge} 2048w`
-                  : `${imageSprLessonBuilderLight} 1024w, ${imageSprLessonBuilderLightLarge} 2048w`
-              }
-              width={1024}
-              height={800}
-              alt={`A set of ${theme} themed components for the aero design system`}
-              sizes="100vw"
-              loading="eager"
-            />
+          <div
+  id="final-image"
+  style={{
+    width: '85vw',
+    height: '90vh',
+    margin: '0 auto',
+    padding: 0,
+    overflow: 'hidden',
+    backgroundImage: `url(${
+      isDark ? imageSprLessonBuilderDarkLarge : imageSprLessonBuilderLightLarge
+    })`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundColor: '#e0e0e0',
+    transition: 'opacity 0.5s ease-in-out',
+  }}
+/>
+
 
             <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
