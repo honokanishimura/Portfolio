@@ -80,12 +80,12 @@
 /* ===== モバイル調整（高さを少し抑える）===== */
 @media (max-width: 768px) {
   .image-trim-fix {
-    height: 240px !important;
+    height: 150px !important;
     object-fit: contain !important;
   }
 
   #final-image {
-    height: 30vh;
+    height: 15vh;
     background-size: contain;
   }
 }
