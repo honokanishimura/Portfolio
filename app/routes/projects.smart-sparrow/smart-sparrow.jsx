@@ -184,6 +184,7 @@ export const SmartSparrow = () => {
                 height={800}
                 alt={`A set of ${theme} themed components for the aero design system`}
                 sizes="100vw"
+                style={{ backgroundColor: '#f2f2f2' }}
               />
             </motion.div>
 
