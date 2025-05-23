@@ -1,4 +1,4 @@
-/* ===== Reset global layout alignment (avoid centering) ===== */
+/* ===== Reset layout alignment ===== */
 :global(.projectSectionContent),
 :global(.projectContainer),
 :global(.projectHeader),
@@ -15,70 +15,72 @@
   padding: 0 !important;
 }
 
-/* ProjectImage コンポーネント内の余白を削除 */
-:global(.image) {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* ProjectSectionContent の余白を詰める */
-:global(.sectionContent) {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* ===== Text container layout ===== */
+/* ===== Unified max-width for all content blocks ===== */
 .projectTextRow {
   display: flex !important;
   flex-direction: column !important;
   justify-content: flex-start !important;
   align-items: flex-start !important;
   text-align: left !important;
-  margin-top: 0 !important;
+  margin: 0 auto !important;
+  max-width: 880px !important;
+  width: 100% !important;
 }
 
-/* ===== Section heading style ===== */
 .projectHeading {
-  max-width: 960px !important;
+  max-width: 880px !important;
   width: 100% !important;
   margin: 1rem 0 1.2rem 0 !important; 
   padding: 0 !important;
   text-align: left !important;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   line-height: 1.3;
 }
 
-/* ===== Paragraph text style ===== */
 .projectText {
-  max-width: 1000px !important;
+  max-width: 880px !important;
   width: 100% !important;
   font-size: 1.1rem !important;
   line-height: 1.75 !important;
   padding: 0 !important;
-  margin: 0 0 1.8rem 0 !important;
+  margin: 0 0 1.6rem 0 !important;
   text-align: left !important;
   word-break: break-word;
 }
 
-
-.projectSectionContent {
-  margin-bottom: 0.5rem !important; /* 👈 新たに追加 */
+/* ===== Image appearance ===== */
+.image-trim-fix {
+  display: block !important;
+  margin: 0 auto !important;
+  width: 100% !important;
+  max-width: 880px !important;
+  height: auto !important;
+  object-fit: cover !important;
+  background-color: #e0e0e0 !important; 
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  transition: opacity 0.5s ease-in-out;
 }
 
-/* ===== Theme color for light mode ===== */
+/* ===== Section padding tweak ===== */
+.projectSectionContent {
+  margin-bottom: 0.5rem !important;
+  padding: 0 !important;
+}
+
+/* ===== Theme colors ===== */
 :root[data-theme='light'] .projectHeading,
 :root[data-theme='light'] .projectText {
   color: #2e2e2e !important;
 }
 
-/* ===== Theme color for dark mode ===== */
 :root[data-theme='dark'] .projectHeading,
 :root[data-theme='dark'] .projectText {
   color: #f5f5f5 !important;
 }
 
-/* ===== Extra spacing for account section ===== */
+/* ===== Account-specific spacing ===== */
 .accountHeading {
   margin-top: 4rem !important;
 }
@@ -87,25 +89,11 @@
   margin-top: 6rem !important;
 }
 
-/* ===== Stabilize image appearance in center layout ===== */
-.image-trim-fix {
-  display: block !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  height: 400px !important;           
-  object-fit: cover !important;
-  background-color: #e0e0e0 !important; 
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  transition: opacity 0.5s ease-in-out;
-}
-
-/* ===== Mobile responsiveness adjustments ===== */
+/* ===== Mobile adjustments ===== */
 @media (max-width: 768px) {
   .image-trim-fix {
-    height: 150px !important;
+    height: auto !important;
     object-fit: contain !important;
+    max-width: 100% !important;
   }
-
- 
 }

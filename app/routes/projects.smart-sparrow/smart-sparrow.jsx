@@ -29,7 +29,6 @@ import styles from './smart-sparrow.module.css';
 // Background and section image assets
 import backgroundSpr from '~/assets/spr-background.jpg';
 import backgroundSprLarge from '~/assets/spr-background-large.jpg';
-import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
 
 import imageSprLessonBuilderDark from '~/assets/Hyo-desktop.png';
 import imageSprLessonBuilderDarkLarge from '~/assets/Hyo-desktop.png';
@@ -77,7 +76,6 @@ export const SmartSparrow = () => {
             opacity={isDark ? 0.75 : 0.8}
             src={backgroundSpr}
             srcSet={`${backgroundSpr} 1080w, ${backgroundSprLarge} 2160w`}
-            placeholder={backgroundSprPlaceholder}
           />
         )}
 
@@ -173,8 +171,8 @@ export const SmartSparrow = () => {
               key={theme}
               srcSet={
                 isDark
-                  ? `${imageSprDesignSystemDark} 1280w, ${imageSprComponentsDarkLarge} 2560w`
-                  : `${imageSprDesignSystemDark} 1280w, ${imageSprComponentsDarkLarge} 2560w`
+                  ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
+                  : `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
               }
               width={1280}
               height={800}
