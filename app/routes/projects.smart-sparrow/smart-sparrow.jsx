@@ -97,8 +97,9 @@ export const SmartSparrow = () => {
               className="image-trim-fix"
               srcSet={
                 isDark
-                  ? `${imageSprComponentsDark} 1280w, ${imageSprComponentsDarkLarge} 2560w`
-                  : `${imageSprComponentsLight} 1280w, ${imageSprComponentsLightLarge} 2560w`
+
+                ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
+                : `${imageSprLessonBuilderLight} 1280w, ${imageSprLessonBuilderLightLarge} 2560w`
               }
               width={1280}
               height={800}
@@ -135,15 +136,15 @@ export const SmartSparrow = () => {
               className="image-trim-fix"
               srcSet={
                 isDark
-                  ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
-                  : `${imageSprLessonBuilderLight} 1280w, ${imageSprLessonBuilderLightLarge} 2560w`
+                  ? `${imageSprComponentsDark} 1280w, ${imageSprComponentsDarkLarge} 2560w`
+                  : `${imageSprComponentsLight} 1280w, ${imageSprComponentsLightLarge} 2560w`
               }
               width={1280}
               height={800}
               placeholder={
                 isDark
-                  ? imageSprLessonBuilderDark
-                  : imageSprLessonBuilderLight
+                  ? imageSprComponentsDark
+                  : imageSprComponentsLight
               }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Account form interface"
@@ -153,16 +154,12 @@ export const SmartSparrow = () => {
               <ProjectSectionHeading className={styles.projectHeading}>
                 Form & State: Account
               </ProjectSectionHeading>
+
+
               <ProjectSectionText className={styles.projectText}>
                 Implemented user authentication, registration, and profile editing features using React and TypeScript.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
                 Utilized <code>react-hook-form</code> for streamlined form validation, error handling, and default value management.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
                 Global authentication state was managed via Context API, enabling conditional UI rendering and route protection.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
                 Enabled real-time editing of payment and shipping information with a flexible and responsive form UI.
               </ProjectSectionText>
             </div>
