@@ -127,33 +127,6 @@
   }
 }
 
-/* 🧱 親の枠を見えなくするための最低限のスタイル */
-.image-trim-fix {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2; /* ✅ グレー背景で白枠回避 */
-  border: none;
-  box-shadow: none;
-  outline: none;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
-}
-
-/* 🖼️ 中の <img> に対しても徹底的に初期化 */
-.image-trim-fix img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border: none;
-  background: none;
-  box-shadow: none;
-  outline: none;
-}
 
 
 

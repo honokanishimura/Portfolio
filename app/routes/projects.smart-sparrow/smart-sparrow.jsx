@@ -165,54 +165,25 @@ export const SmartSparrow = () => {
         </ProjectSection>
 
         <ProjectSection light={isDark}>
-          <ProjectSectionContent>
+  <ProjectSectionContent>
+    <div
+      id="final-image"
+      style={{
+        backgroundImage: `url(${isDark ? imageSprLessonBuilderDark : imageSprLessonBuilderLight})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        width: '100%',
+        maxWidth: '480px',
+        aspectRatio: '1024 / 800',
+        margin: '0 auto',
+        backgroundColor: '#f2f2f2',
+        overflow: 'hidden',
+      }}
+    />
+  </ProjectSectionContent>
+</ProjectSection>
 
-          <div>
-         <Image
-         key={theme}
-         className="image-trim-fix"
-    srcSet={
-      isDark
-        ? `${imageSprLessonBuilderDark} 1024w, ${imageSprLessonBuilderDarkLarge} 2048w`
-        : `${imageSprLessonBuilderLight} 1024w, ${imageSprLessonBuilderLightLarge} 2048w`
-    }
-    width={1024}
-    height={800}
-    alt={`A set of ${theme} themed components for the aero design system`}
-    sizes="100vw"
-    loading="eager"
-  decoding="async"
-  />
-</div>
-
- 
-
-            <motion.div
-              className={`${styles.projectTextRow} ${styles.accountTextBlock}`}
-              initial={{ y: 80, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <ProjectSectionHeading className={styles.projectHeading}>
-              Form & State: Account
-
-              </ProjectSectionHeading>
-              <ProjectSectionText className={styles.projectText}>
-                Implemented user authentication, registration, and profile editing features using React and TypeScript.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
-                Utilized <code>react-hook-form</code> for streamlined form validation, error handling, and default value management.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
-                Global authentication state was managed via Context API, enabling conditional UI rendering and route protection.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
-                Enabled real-time editing of payment and shipping information with a flexible and responsive form UI.
-              </ProjectSectionText>
-            </motion.div>
-          </ProjectSectionContent>
-        </ProjectSection>
         </ProjectContainer>
 
         <div
