@@ -130,14 +130,26 @@
 .image-trim-fix {
   display: block !important;
   margin: 0 auto;
-  background-color: #f2f2f2 !important; /* ✅ 背景を白に近いグレーにして違和感を減らす */
-  object-fit: cover !important;         /* ✅ contain → cover に変更して余白をなくす */
   width: 100% !important;
   max-width: 480px !important;
   height: auto !important;
-  border-radius: 0 !important;
+  background-color: #f2f2f2 !important; /* ✅ 灰色背景で外枠だけが目立たないように */
+  object-fit: cover !important;
+  border: none !important;
   box-shadow: none !important;
+  outline: none !important;
 }
+.image-trim-fix img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-color: #f2f2f2;
+  object-fit: cover;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
 
 
 

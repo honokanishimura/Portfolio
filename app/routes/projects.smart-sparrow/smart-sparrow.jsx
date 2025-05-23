@@ -180,6 +180,8 @@ export const SmartSparrow = () => {
     height={800}
     alt={`A set of ${theme} themed components for the aero design system`}
     sizes="100vw"
+    loading="eager"
+  decoding="async"
   />
 </div>
 
