@@ -14,7 +14,7 @@ The layout and animation were built from scratch using modern tools to ensure a 
 ---
 
 ### Top Page (Hero and Categories)
-![Home]()
+![portfolio](https://github.com/user-attachments/assets/5c3b8327-8851-4a6f-a69c-f38d98456824)
 
 ## Featured Projects
 
