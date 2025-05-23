@@ -60,20 +60,7 @@ export const SmartSparrow = () => {
     preloadImg.onload = () => setBgLoaded(true);
   }, []);
 
-  useEffect(() => {
-    const navbar = document.querySelector('header');
-    const target = document.querySelector('#final-image');
-    if (!target) {
-      if (navbar) navbar.style.display = '';
-      return;
-    }
-    
-    observer.observe(target);
-    return () => {
-      observer.disconnect();
-      if (navbar) navbar.style.display = '';
-    };
-  }, []);
+  
 
   return (
     <>
