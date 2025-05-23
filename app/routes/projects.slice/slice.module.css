@@ -1,7 +1,9 @@
+/* ===== Column layout section spacing ===== */
 .columns {
   margin: 20px 0 60px;
 }
 
+/* ===== Two-column responsive grid layout ===== */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -9,10 +11,11 @@
   margin: 40px 0;
 
   @media (--mediaTablet) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; 
   }
 }
 
+/* ===== Grid layout for layered images (foreground/background) ===== */
 .gridImage {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -21,10 +24,11 @@
   grid-row: 1;
 
   @media (--mediaLaptop) {
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr; 
   }
 }
 
+/* ===== Background image in the grid, spans multiple rows ===== */
 .gridBackground {
   grid-column: 1;
   grid-row: 1 / span 2;
@@ -38,6 +42,7 @@
   }
 }
 
+/* ===== Foreground image positioning on grid ===== */
 .gridForeground {
   grid-column: 1;
   grid-row: 2;
@@ -50,10 +55,11 @@
   @media (--mediaLaptop) {
     width: auto;
     left: auto;
-    right: auto;
+    right: auto; 
   }
 }
 
+/* ===== Padding for text block next to image grid ===== */
 .gridText {
   padding-top: 80px;
 
@@ -66,6 +72,7 @@
   }
 }
 
+/* ===== Sidebar image grid with flexible spacing ===== */
 .sidebarImages {
   display: grid;
   grid-template-columns: repeat(6, [col] 1fr);
@@ -82,6 +89,7 @@
   }
 }
 
+/* ===== Text next to sidebar images ===== */
 .sidebarImagesText {
   display: flex;
   align-items: flex-start;
@@ -94,19 +102,20 @@
   }
 }
 
+/* ===== Layered sidebar images with position tuning ===== */
 .sidebarImage {
   &:first-child {
     grid-column: col 1 / span 4;
     grid-row: 1;
     position: relative;
     top: 5%;
-    opacity: 0.4;
+    opacity: 0.4; 
   }
 
   &:last-child {
     grid-column: col 3 / span 4;
     grid-row: 1;
     position: relative;
-    top: -5%;
+    top: -5%; 
   }
 }

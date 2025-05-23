@@ -1,8 +1,14 @@
+// SmartSparrow.jsx — Project detail page for a furniture e-commerce app
+// This page showcases UI/UX improvements, form state handling, and user features using React/TypeScript
+
 import { useEffect, useState } from 'react';
 
+// Reusable components
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import { useTheme } from '~/components/theme-provider';
+
+// Layout components for structured project presentation
 import {
   ProjectBackground,
   ProjectContainer,
@@ -14,11 +20,13 @@ import {
   ProjectSectionText,
   ProjectTextRow,
 } from '~/layouts/project';
+
 import { baseMeta } from '~/utils/meta';
 import { media } from '~/utils/style';
 
 import styles from './smart-sparrow.module.css';
 
+// Background and section image assets
 import backgroundSpr from '~/assets/spr-background.jpg';
 import backgroundSprLarge from '~/assets/spr-background-large.jpg';
 import backgroundSprPlaceholder from '~/assets/spr-background-placeholder.jpg';
@@ -54,17 +62,17 @@ export const SmartSparrow = () => {
   const isDark = theme === 'dark';
   const [bgLoaded, setBgLoaded] = useState(false);
 
+  // Preload the background image to reduce layout shift
   useEffect(() => {
     const preloadImg = new window.Image();
     preloadImg.src = backgroundSpr;
     preloadImg.onload = () => setBgLoaded(true);
   }, []);
 
-  
-
   return (
     <>
       <ProjectContainer>
+        {/* Background image for the project header */}
         {bgLoaded && (
           <ProjectBackground
             opacity={isDark ? 0.75 : 0.8}
@@ -74,6 +82,7 @@ export const SmartSparrow = () => {
           />
         )}
 
+        {/* Header with project title, description, and roles */}
         <ProjectHeader
           title={title}
           description={description}
@@ -81,6 +90,7 @@ export const SmartSparrow = () => {
           roles={roles}
         />
 
+        {/* Section: Hero UI image (product listing) */}
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
@@ -93,11 +103,12 @@ export const SmartSparrow = () => {
               width={1280}
               height={800}
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-              alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
+              alt="Furniture product UI"
             />
           </ProjectSectionContent>
         </ProjectSection>
 
+        {/* Section: 1 */}
         <ProjectSection>
           <ProjectSectionContent>
             <div className={styles.projectTextRow}>
@@ -117,9 +128,10 @@ export const SmartSparrow = () => {
           </ProjectSectionContent>
         </ProjectSection>
 
+        {/* Section: 2 */}
         <ProjectSection padding="top">
           <ProjectSectionContent>
-          <ProjectImage
+            <ProjectImage
               className="image-trim-fix"
               srcSet={
                 isDark
@@ -134,7 +146,7 @@ export const SmartSparrow = () => {
                   : imageSprLessonBuilderLight
               }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-              alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
+              alt="Account form interface"
             />
 
             <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
@@ -158,13 +170,13 @@ export const SmartSparrow = () => {
         </ProjectSection>
       </ProjectContainer>
 
+      {/* Final */}
       <div
         id="final-image"
         style={{
           width: '85vw',
           height: '90vh',
           margin: '0 auto',
-
           padding: 0,
           overflow: 'hidden',
           backgroundImage: `url(${imageSprDesignSystemDark})`,
@@ -173,6 +185,8 @@ export const SmartSparrow = () => {
           backgroundRepeat: 'no-repeat',
         }}
       />
+
+      {/* Footer */}
       <Footer />
     </>
   );

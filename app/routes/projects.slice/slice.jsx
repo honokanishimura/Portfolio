@@ -1,6 +1,10 @@
+// Slice.jsx — Project detail page for a CMS with advanced filtering features
+// This showcases multi- and single-condition filters using Laravel + SQLite + FTS5 backend
+
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 
+// Layout components used throughout project detail pages
 import {
   ProjectBackground,
   ProjectContainer,
@@ -21,7 +25,7 @@ import { media } from '~/utils/style';
 
 import styles from './slice.module.css';
 
-// Assets
+// Static assets
 import sliceApp from '~/assets/1-1_Project-1_landing-dm.png';
 import sliceAppLarge from '~/assets/1-1_Project-1_landing-dm.png';
 import sliceAppPlaceholder from '~/assets/1-1_Project-1_landing-dm.png';
@@ -38,7 +42,7 @@ import sliceSlides from '~/assets/1-3_Project-1_pagetype-m.png';
 import sliceSlidesLarge from '~/assets/1-3_Project-1_pagetype-m.png';
 import sliceSlidesPlaceholder from '~/assets/1-3_Project-1_pagetype-m.png';
 
-// Page Metadata
+// Meta information for SEO and social media
 const title = 'Business Challenge Visualization System';
 const description =
   'Built a CMS to help SMEs find and solve challenges through structured support content. Focused on clarity, speed, and ease of use.';
@@ -50,6 +54,7 @@ export const Slice = () => {
   return (
     <Fragment>
       <ProjectContainer className={styles.slice}>
+        {/* Background hero image with opacity */}
         <ProjectBackground
           src={sliceBackground}
           srcSet={`${sliceBackground} 1280w, ${sliceBackgroundLarge} 2560w`}
@@ -59,6 +64,7 @@ export const Slice = () => {
           opacity={0.4}
         />
 
+        {/* Project header with title, description, and tech stack */}
         <ProjectHeader
           title={title}
           description={description}
@@ -66,7 +72,7 @@ export const Slice = () => {
           roles={roles}
         />
 
-        {/* 🖼 ヒーロー画像 */}
+        {/* Hero image of app dashboard UI */}
         <ProjectSection>
           <ProjectSectionContent>
             <ProjectImage
@@ -80,7 +86,7 @@ export const Slice = () => {
           </ProjectSectionContent>
         </ProjectSection>
 
-        {/* 🔍 Multi-condition Filter セクション */}
+        {/* Section: 1 */}
         <ProjectSection>
           <ProjectSectionColumns className={styles.columns}>
             <motion.div
@@ -105,6 +111,7 @@ export const Slice = () => {
               </ProjectSectionText>
             </motion.div>
 
+            {/* Corresponding filter sidebar image */}
             <motion.div
               className={styles.mockFrameWrapper}
               initial={{ x: 100, opacity: 0 }}
@@ -125,7 +132,7 @@ export const Slice = () => {
           </ProjectSectionColumns>
         </ProjectSection>
 
-        {/* 🧩 Single-condition Filter セクション */}
+        {/* Section: 2 */}
         <ProjectSection light>
           <ProjectSectionContent>
             <motion.div
@@ -153,6 +160,7 @@ export const Slice = () => {
               </ProjectSectionText>
             </motion.div>
 
+            {/* Final */}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
@@ -173,6 +181,7 @@ export const Slice = () => {
         </ProjectSection>
       </ProjectContainer>
 
+      {/* Footer section */}
       <Footer />
     </Fragment>
   );

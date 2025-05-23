@@ -68,7 +68,6 @@ export const Profile = ({ id, visible, sectionRef }) => {
               </Button>
             </div>
 
-            {/* ✅ 画像とカタカナSVGを縦に並べる */}
             <div className={styles.imageWrapper}>
               <div className={styles.image}>
                 <Image

@@ -1,18 +1,18 @@
-/* 📸 レスポンシブ画像 */
+/* ===== Responsive image style ===== */
 .responsiveImage {
   width: 100%;
   max-width: 720px;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   display: block;
-  border-radius: 0; /* ✅ 丸み削除 */
+  border-radius: 0;
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 2.5rem;
 }
 
-/* 📄 テキスト行 */
+/* ===== Project text layout ===== */
 .projectTextRow {
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
   padding: 0 2rem;
 }
 
-/* 🔠 セクションタイトル */
+/* ===== Section heading ===== */
 .projectHeading {
   max-width: 960px;
   width: 100%;
@@ -34,7 +34,7 @@
   line-height: 1.3;
 }
 
-/* 📝 テキスト本文 */
+/* ===== Paragraph text ===== */
 .projectText {
   max-width: 100%;
   width: 100%;
@@ -46,35 +46,36 @@
   text-align: left;
 }
 
-/* 🌗 ダーク/ライトモード対応 */
+/* ===== Theme color: light ===== */
 [data-theme='light'] .projectText {
   color: rgba(0, 0, 0, 0.9);
 }
 
+/* ===== Theme color: dark ===== */
 [data-theme='dark'] .projectText {
   color: #eaeaea;
 }
 
-/* 💻 PC時（横並び用） */
+/* ===== Desktop layout for side-by-side mock frame ===== */
 @media (min-width: 769px) {
   .mockFrameWrapper {
-    width: 45%; /* ✅ 少し狭める */
+    width: 45%;
     height: auto;
   }
 
   .mockFrameImage {
-    max-height: 580px; /* ✅ 縦少し長めに */
+    max-height: 580px;
     width: 100%;
     height: auto;
     object-fit: contain;
     object-position: center;
     display: block;
     position: relative;
-    border-radius: 0; /* ✅ 丸み削除 */
+    border-radius: 0;
   }
 }
 
-/* 📱 モバイル対応 */
+/* ===== Mobile layout ===== */
 .mockFrameWrapper {
   width: 100%;
   max-width: 100%;
@@ -85,16 +86,16 @@
 }
 
 .mockFrameImage {
-  max-height: 460px; /* ✅ モバイル時の高さも調整 */
-  width: 100%;       /* ✅ 横幅を自然に戻す */
+  max-height: 460px;
+  width: 100%;
   height: auto;
   object-fit: contain;
   display: block;
   position: relative;
-  border-radius: 0; /* ✅ 丸み削除 */
+  border-radius: 0;
 }
 
-/* 🖼️ フルスクリーン画像用（モバイル調整） */
+/* ===== Fullscreen image style (mobile-adjusted) ===== */
 .fullscreenImage {
   width: 100%;
   height: 50%;
@@ -103,21 +104,23 @@
   display: block;
   box-shadow: none;
 }
+
+/* ===== Trimmed wide image layout ===== */
 .imageTrimFix {
   display: block;
   width: 100%;
-  max-width: 960px;         /* ✅ SmartSparrowと揃える */
-  aspect-ratio: 16 / 7;     /* ✅ 横長にする（16/6〜16/8でもOK） */
+  max-width: 960px;
+  aspect-ratio: 16 / 7;
   object-fit: cover;
   object-position: center;
-  margin: 0 auto 2.5rem auto; /* ✅ 中央寄せ＆下余白 */
+  margin: 0 auto 2.5rem auto;
   border-radius: 0;
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.2),
     0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
+/* ===== Mobile adjustments ===== */
 @media (max-width: 768px) {
   .fullscreenImage {
     object-fit: contain !important;

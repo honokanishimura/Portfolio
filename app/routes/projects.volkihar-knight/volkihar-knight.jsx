@@ -1,3 +1,9 @@
+// VolkiharKnight.jsx — Project detail page for an enterprise ETL platform built with Laravel
+// Highlights include member management, bulk registration, and UX design for onboarding
+
+import { Fragment } from 'react';
+import { motion } from 'framer-motion';
+
 import volkiharBackgroundLarge from '~/assets/Waha-background.png';
 import volkiharBackgroundPlaceholder from '~/assets/Waha-background.png';
 import volkiharBackground from '~/assets/Waha-background.png';
@@ -23,31 +29,26 @@ import {
   ProjectSectionText,
 } from '~/layouts/project';
 
-import { Fragment, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './volkihar-knight.module.css';
 
 const title = 'No-Code ETL Platform for Enterprise Data Automation';
-
 const description =
   'A modular, GUI-first platform for building scalable and maintainable ETL pipelines.';
-
 const roles = [
   'Backend Development with Laravel (PHP)',
   'MySQL Schema Design',
-  'ETL Workflow Engineering'
+  'ETL Workflow Engineering',
 ];
 
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export function VolkiharKnight() {
-  
-
   return (
     <Fragment>
       <ProjectContainer>
+        {/* Background hero image */}
         <ProjectBackground
           srcSet={`${volkiharBackground} 1280w, ${volkiharBackgroundLarge} 1920w`}
           width={1280}
@@ -56,6 +57,7 @@ export function VolkiharKnight() {
           opacity={0.5}
         />
 
+        {/* Project title, description, and roles */}
         <ProjectHeader
           title={title}
           description={description}
@@ -63,7 +65,7 @@ export function VolkiharKnight() {
           roles={roles}
         />
 
-        {/* Hero Image */}
+        {/* Hero section with main dashboard UI */}
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
@@ -77,7 +79,7 @@ export function VolkiharKnight() {
           </ProjectSectionContent>
         </ProjectSection>
 
-        {/* Laravel Section */}
+        {/* Section 1 */}
         <ProjectSection>
           <div className={styles.projectSectionRow}>
             <motion.div
@@ -110,12 +112,11 @@ export function VolkiharKnight() {
             </motion.div>
 
             <motion.div
-  initial={{ y: 80, scale: 0.98, opacity: 0 }}
-  whileInView={{ y: 0, scale: 1, opacity: 1 }}
-  transition={{ duration: 0.8, ease: 'easeOut' }}
-  viewport={{ once: true }}
->
-
+              initial={{ y: 80, scale: 0.98, opacity: 0 }}
+              whileInView={{ y: 0, scale: 1, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut' }}
+              viewport={{ once: true }}
+            >
               <img
                 src={WahaBuild}
                 alt="Waha Laravel Build"
@@ -125,7 +126,7 @@ export function VolkiharKnight() {
           </div>
         </ProjectSection>
 
-        {/* Registration UX Section */}
+        {/* Section 2 */}
         <ProjectSection>
           <ProjectSectionContent>
             <motion.div
@@ -152,14 +153,13 @@ export function VolkiharKnight() {
         </ProjectSection>
       </ProjectContainer>
 
-      {/* Fullscreen Image */}
+      {/* Final */}
       <div
         id="final-image"
         style={{
           width: '85vw',
           height: '90vh',
           margin: '0 auto',
-
           padding: 0,
           overflow: 'hidden',
           backgroundImage: `url(${WahaAll})`,
