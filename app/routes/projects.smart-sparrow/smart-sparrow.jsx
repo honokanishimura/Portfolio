@@ -67,12 +67,7 @@ export const SmartSparrow = () => {
       if (navbar) navbar.style.display = '';
       return;
     }
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (navbar) navbar.style.display = entry.isIntersecting ? 'none' : '';
-      },
-      { threshold: 0.6 }
-    );
+    
     observer.observe(target);
     return () => {
       observer.disconnect();
