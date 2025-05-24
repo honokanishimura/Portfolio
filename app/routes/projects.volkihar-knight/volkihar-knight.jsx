@@ -76,11 +76,12 @@ export function VolkiharKnight() {
 
 
               <ProjectSectionText className={styles.projectText}>
-              This administrator dashboard serves as the control hub for all user management operations, offering real-time insights into active sessions, user statuses, and access roles across different departments.
-              Designed with scalability in mind, the interface supports dynamic data rendering through Eloquent ORM, ensuring that even large-scale datasets remain responsive and up-to-date without page reloads.
-              A key feature includes the CSV import pipeline with automatic schema mapping and validation, streamlining bulk onboarding while preventing duplicate entries and structural conflicts.
-              Administrators benefit from detailed activity logs and role-based filtering options, allowing precise tracking of permission changes and workflow transitions within the organization.
-  From a UX standpoint, the dashboard prioritizes clarity—each widget and data panel adapts contextually, showing only the relevant fields based on user role, region, and operational scope.
+
+              Central dashboard for managing all users, with live data showing session activity, current status, and access levels across departments.
+Designed to handle growth smoothly, using Eloquent ORM for real-time updates. Large datasets stay responsive without needing a full page reload.
+Supports bulk onboarding through CSV import. Columns are auto-mapped and checked to avoid duplicate entries or format issues.
+Includes activity history and role filters to help track permission changes and internal actions clearly.
+Each panel displays only the most relevant information, adjusting based on user role, location, and task to keep the interface clean and easy to use.
 </ProjectSectionText>
 
 
@@ -134,11 +135,11 @@ export function VolkiharKnight() {
 
 
               <ProjectSectionText className={styles.projectText}>
-  The onboarding module introduces intuitive dropdown-based forms for capturing user details, including industry, department, and organizational hierarchy. This reduces decision fatigue and improves accuracy during manual input.
-  To further streamline the process, CSV import functionality has been enhanced with auto-mapping capabilities, intelligently aligning file columns with system fields, even in cases of partial mismatches.
-  This implementation led to a reduction in onboarding errors by over 90%, minimizing data cleaning time for administrators and ensuring cleaner records at scale.
-  The improvements were informed by a series of stakeholder interviews and onboarding funnel drop-off analysis, highlighting key friction points and user confusion during early registration.
-  As a result, the average onboarding duration per user dropped from six minutes to just under two, significantly improving throughput for HR and operations teams during peak hiring seasons.
+              Easy-to-use dropdowns make it simple to fill in user details like industry, department, and company structure. This keeps the process quick and accurate.
+CSV files can be uploaded in bulk, with column names matched automatically, even when formats don’t fully align.
+Onboarding mistakes dropped by over 90%, saving time and improving data quality across the system.
+Changes were based on real feedback from users and testing, which helped identify confusing steps and areas where people often stopped.
+Time needed to register each user went down from six minutes to less than two, helping teams work faster during busy periods.
 </ProjectSectionText>
 
             </motion.div>
