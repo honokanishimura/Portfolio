@@ -106,14 +106,14 @@ export const SmartSparrow = () => {
       
           <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-                Form & State: Account
+              Seamless Purchase Flow from Product to Confirmation
               </ProjectSectionHeading>
 
 
               <ProjectSectionText className={styles.projectText}>
-                Many traditional furniture e-commerce platforms suffer from fragmented navigation and inconsistent UI patterns, leading to user drop-off despite high purchase intent.
-                This project redesigned the end-to-end purchase flow—from product detail pages to the final checkout—using React and TypeScript to ensure a modular, maintainable architecture.
-                Emphasis was placed on improving UX clarity, implementing robust state management, and delivering a seamless, frustration-free shopping experience.
+              This interface supports a smooth and intuitive shopping journey that includes product selection, cart management, checkout, and order history.
+Built with React and TypeScript, the system handles input dynamically, validates user actions in real time, and maintains a consistent state throughout.
+Designed with clarity and responsiveness in mind, the flow ensures confidence and ease across devices, especially on mobile.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
@@ -142,15 +142,14 @@ export const SmartSparrow = () => {
 
             <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-                Form & State: Account
+              Designing Trust Through Account Interactions
               </ProjectSectionHeading>
 
 
               <ProjectSectionText className={styles.projectText}>
-                Implemented user authentication, registration, and profile editing features using React and TypeScript.
-                Utilized <code>react-hook-form</code> for streamlined form validation, error handling, and default value management.
-                Global authentication state was managed via Context API, enabling conditional UI rendering and route protection.
-                Enabled real-time editing of payment and shipping information with a flexible and responsive form UI.
+              This section brings together essential user interactions such as signing in, editing profiles, and managing payment details.
+              All features are designed to work seamlessly with responsive layouts and consistent behavior across the application.
+              The result is a clear and uninterrupted flow that helps users stay focused and in control of their actions.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>

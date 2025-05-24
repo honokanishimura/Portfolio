@@ -110,19 +110,6 @@ export function VolkiharKnight() {
                 <strong>Tech Stack:</strong> Laravel / Blade / MySQL
               </ProjectSectionText>
             </motion.div>
-
-            <motion.div
-              initial={{ y: 80, scale: 0.98, opacity: 0 }}
-              whileInView={{ y: 0, scale: 1, opacity: 1 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
-              viewport={{ once: true }}
-            >
-              <img
-                src={WahaBuild}
-                alt="Waha Laravel Build"
-                className={styles.mockFrameImage}
-              />
-            </motion.div>
           </div>
         </ProjectSection>
 
@@ -154,20 +141,22 @@ export function VolkiharKnight() {
       </ProjectContainer>
 
       {/* Final */}
-      <div
-        id="final-image"
-        style={{
-          width: '85vw',
-          height: '90vh',
-          margin: '0 auto',
-          padding: 0,
-          overflow: 'hidden',
-          backgroundImage: `url(${WahaAll})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      />
+      <ProjectSection padding="none">
+      <ProjectSectionContent>
+    <ProjectImage
+      className="image-trim-fix"
+      srcSet={
+        isDark
+          ? `${WahaAll} 1280w, ${WahaAll} 2560w`
+          : `${WahaAll} 1280w, ${WahaAll} 2560w`
+      }
+      width={1280}
+      height={800}
+      alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+      sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+    />
+  </ProjectSectionContent>
+</ProjectSection>
 
       <Footer />
     </Fragment>
