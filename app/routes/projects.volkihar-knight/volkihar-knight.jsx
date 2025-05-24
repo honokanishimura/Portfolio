@@ -31,8 +31,8 @@ import styles from './volkihar-knight.module.css';
 const title = 'Enterprise ETL Platform for Unified Data Operations';
 const description = 'Built with Laravel and MySQL, this platform enables centralized member control, efficient onboarding, and adaptive UX for enterprise users.';
 const roles = [
-  'Laravel-powered Backend Architecture',
-  'Relational Database Schema Design (MySQL)',
+  'Laravel',
+  'MySQL',
   'Enterprise UX Optimization',
 ];
 
@@ -112,7 +112,6 @@ export function VolkiharKnight() {
               className="image-trim-fix"
               srcSet={`${WahaHero} 800w, ${WahaHero} 1100w`}
               width={800}
-              height={436}
               alt="Admin dashboard view showing real-time member status."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
@@ -153,7 +152,7 @@ export function VolkiharKnight() {
               className="image-trim-fix"
               srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
               width={1280}
-              height={800}
+              height={1000}
               alt="Overview of all major UI states across the platform."
               sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
             />
