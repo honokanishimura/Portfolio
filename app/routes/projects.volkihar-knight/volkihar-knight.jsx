@@ -45,6 +45,10 @@ const roles = [
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export function VolkiharKnight() {
+
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
+  
   return (
     <Fragment>
       <ProjectContainer>
