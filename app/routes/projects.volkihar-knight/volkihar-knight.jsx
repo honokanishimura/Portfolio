@@ -87,15 +87,20 @@ export function VolkiharKnight() {
 
 
 
-              <ProjectSectionText className={styles.projectText}>
-                <strong>Key features:</strong>
-                <ul style={{ paddingLeft: '1.5em', listStyleType: 'disc' }}>
-                  <li>Real-time status dashboard</li>
-                  <li>Role-based access controls</li>
-                  <li>Editable user profiles with audit logging</li>
-                  <li>CSV upload for rapid onboarding</li>
-                </ul>
-              </ProjectSectionText>
+<ProjectSectionText className={styles.projectText}>
+  <strong>Key Features:</strong>
+  <div className={styles.featureGrid}>
+    <ul>
+      <li>Real-time status dashboard</li>
+      <li>Role-based access controls</li>
+    </ul>
+    <ul>
+      <li>Editable user profiles with audit logging</li>
+      <li>CSV upload for rapid onboarding</li>
+    </ul>
+  </div>
+</ProjectSectionText>
+
             </motion.div>
           </ProjectSectionContent>
         </ProjectSection>
@@ -127,12 +132,16 @@ export function VolkiharKnight() {
               <ProjectSectionHeading className={styles.projectHeading}>
                 Streamlined Onboarding Workflow
               </ProjectSectionHeading>
+
+
               <ProjectSectionText className={styles.projectText}>
-                Introduced dropdown-driven form fields for smoother user entry and organization categorization. CSV imports now auto-map fields to reduce manual errors by over 90%.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
-                UX refinements were based on stakeholder interviews and funnel analysis, reducing onboarding time per user from 6 mins to under 2.
-              </ProjectSectionText>
+  The onboarding module introduces intuitive dropdown-based forms for capturing user details, including industry, department, and organizational hierarchy. This reduces decision fatigue and improves accuracy during manual input.
+  To further streamline the process, CSV import functionality has been enhanced with auto-mapping capabilities, intelligently aligning file columns with system fields, even in cases of partial mismatches.
+  This implementation led to a reduction in onboarding errors by over 90%, minimizing data cleaning time for administrators and ensuring cleaner records at scale.
+  The improvements were informed by a series of stakeholder interviews and onboarding funnel drop-off analysis, highlighting key friction points and user confusion during early registration.
+  As a result, the average onboarding duration per user dropped from six minutes to just under two, significantly improving throughput for HR and operations teams during peak hiring seasons.
+</ProjectSectionText>
+
             </motion.div>
           </ProjectSectionContent>
         </ProjectSection>

@@ -45,6 +45,28 @@
   transition: opacity 0.5s ease-in-out;
 }
 
+.featureGrid {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.featureGrid ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+  flex: 1;
+  min-width: 220px;
+}
+
+.featureGrid li {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
 [data-theme='light'] .projectText {
   color: rgba(0, 0, 0, 0.9);
 }
