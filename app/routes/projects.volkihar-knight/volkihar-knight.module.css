@@ -37,7 +37,7 @@
   margin: 2.5rem auto 2rem auto !important;
   width: 100% !important;
   max-width: 960px !important;
-  height: auto !important;
+  height: 600px !important; /* ✅ 自然なサイズよりちょい高めに調整 */
   object-fit: cover !important;
   background-color: #e0e0e0 !important;
   border-radius: 0 !important;
