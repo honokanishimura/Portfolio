@@ -64,20 +64,6 @@ export function VolkiharKnight() {
           roles={roles}
         />
 
-        {/* Section: Main Admin Dashboard */}
-        <ProjectSection padding="top">
-          <ProjectSectionContent>
-            <ProjectImage
-              className="image-trim-fix"
-              srcSet={`${WahaHero} 800w, ${WahaHero} 1100w`}
-              width={800}
-              height={436}
-              alt="Main Admin Dashboard"
-              sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
-
         {/* Section: Member Management */}
         <ProjectSection>
           <ProjectSectionContent>
@@ -109,6 +95,22 @@ export function VolkiharKnight() {
           </ProjectSectionContent>
         </ProjectSection>
 
+        {/* Section: Main Admin Dashboard */}
+        <ProjectSection padding="top">
+          <ProjectSectionContent>
+            <ProjectImage
+              className="image-trim-fix"
+              srcSet={`${WahaHero} 800w, ${WahaHero} 1100w`}
+              width={800}
+              height={436}
+              alt="Main Admin Dashboard"
+              sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
+            />
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        
+
         {/* Section: Signup Optimization + All Views */}
         <ProjectSection>
           <ProjectSectionContent>
@@ -124,8 +126,6 @@ export function VolkiharKnight() {
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
                 Simplified the registration process by implementing dropdown-based forms for industry, location, and organization type.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
                 Administrators can register over 100 users instantly via CSV upload, enabling efficient onboarding without compromising input quality.
               </ProjectSectionText>
             </motion.div>
