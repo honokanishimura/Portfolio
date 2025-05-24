@@ -129,25 +129,28 @@ export function VolkiharKnight() {
                 Administrators can register over 100 users instantly via CSV upload, enabling efficient onboarding without compromising input quality.
               </ProjectSectionText>
             </motion.div>
-
-            <motion.div
-              initial={{ y: 100, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <Image
-                className="image-trim-fix"
-                srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
-                width={1280}
-                height={800}
-                alt="Various screens showing ETL member flows and form input"
-                sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-              />
-            </motion.div>
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
+
+            {/* Final */}
+  <ProjectSection padding="none">
+  <ProjectSectionContent>
+    <ProjectImage
+      className="image-trim-fix"
+      srcSet={
+        isDark
+          ? `${WahaAll} 1280w, ${WahaAll} 2560w`
+          : `${WahaAll} 1280w, ${WahaAll} 2560w`
+      }
+      width={1280}
+      height={800}
+      alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+      sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+    />
+  </ProjectSectionContent>
+</ProjectSection>
+
 
       <Footer />
     </Fragment>
