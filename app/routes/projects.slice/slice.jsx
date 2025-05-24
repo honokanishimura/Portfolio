@@ -98,11 +98,10 @@ export const Slice = () => {
             >
               <ProjectSectionHeading>Advanced Filter Logic</ProjectSectionHeading>
               <ProjectSectionText>
-              This filter feature lets users narrow down results by selecting multiple tags or categories. It supports combinations like department or access level, making searches more precise.
-
-The filter updates the content instantly without reloading the page, using fast database queries in the background. Each filter choice updates the URL, so users can share or return to the same view anytime.
-
-The layout is designed for smooth use on both desktop and mobile. Selected results scroll into view automatically, helping users stay focused and reducing effort.
+              This filtering function allows users to refine search results by selecting multiple tags or categories, such as department or access level, to enhance search precision.
+The content updates instantly without requiring a page reload, leveraging efficient database queries in the background.
+Each filter selection also updates the URL, enabling users to easily share or revisit the same view.
+The layout is optimized for seamless performance on both desktop and mobile devices. Selected results automatically scroll into view, helping users stay focused and minimizing unnecessary interaction.
 </ProjectSectionText>
 
             </motion.div>
@@ -140,13 +139,13 @@ The layout is designed for smooth use on both desktop and mobile. Selected resul
             >
               <ProjectSectionHeading>Single-Condition Filtering</ProjectSectionHeading>
               <ProjectSectionText>
-
-              A simple tab-based filter lets users pick one industry at a time, such as Finance, Healthcare, or Education. This helps quickly show only the most relevant content.
-
-Clicking a tab updates the view right away without reloading the page. The selected tab is saved in the URL (e.g., <code>?id=2</code>), making it easy to share or revisit.
-
-Designed for both desktop and mobile, with large clickable areas and smooth interaction. Built using React for fast updates and easy future improvements.
+              The tab-based filter allows users to select a single industry at a time, such as Finance, Healthcare, or Education, and immediately view the most relevant content.
+When a tab is clicked, the content updates instantly without reloading the page. The selected tab is reflected in the URL (for example, <code>?id=2</code>), making it easy to share the view or return to it later.
+The layout is responsive and designed for smooth use on both desktop and mobile devices, with large clickable areas for better accessibility.
+Built with React, the filter delivers high performance and allows for easy maintenance and future improvements.
 </ProjectSectionText>
+
+            
 
             </motion.div>
 

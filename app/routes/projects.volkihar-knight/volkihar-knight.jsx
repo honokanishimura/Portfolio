@@ -76,12 +76,11 @@ export function VolkiharKnight() {
 
 
               <ProjectSectionText className={styles.projectText}>
-
-              Central dashboard for managing all users, with live data showing session activity, current status, and access levels across departments.
-Designed to handle growth smoothly, using Eloquent ORM for real-time updates. Large datasets stay responsive without needing a full page reload.
-Supports bulk onboarding through CSV import. Columns are auto-mapped and checked to avoid duplicate entries or format issues.
-Includes activity history and role filters to help track permission changes and internal actions clearly.
-Each panel displays only the most relevant information, adjusting based on user role, location, and task to keep the interface clean and easy to use.
+              The central dashboard allows administrators to manage all users, with real-time visibility into session activity, user status, and department-specific access levels.
+By leveraging Eloquent ORM, the system ensures smooth real-time updates and maintains responsiveness for large datasets without requiring full page reloads.
+CSV-based bulk onboarding is supported, with automated column mapping and validation to detect duplicates and formatting errors.
+Activity logs and role-based filters provide clear visibility into permission changes and internal operations.
+Each panel dynamically adapts to display only the most relevant information based on the user’s role, location, and current tasks, offering a streamlined and user-friendly experience.
 </ProjectSectionText>
 
 
@@ -135,11 +134,11 @@ Each panel displays only the most relevant information, adjusting based on user 
 
 
               <ProjectSectionText className={styles.projectText}>
-              Easy-to-use dropdowns make it simple to fill in user details like industry, department, and company structure. This keeps the process quick and accurate.
-CSV files can be uploaded in bulk, with column names matched automatically, even when formats don’t fully align.
-Onboarding mistakes dropped by over 90%, saving time and improving data quality across the system.
-Changes were based on real feedback from users and testing, which helped identify confusing steps and areas where people often stopped.
-Time needed to register each user went down from six minutes to less than two, helping teams work faster during busy periods.
+              User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus.
+The system supports bulk CSV uploads, automatically matching column names even when file formats do not fully align.
+These improvements have reduced onboarding errors by over 90%, saving time and enhancing data accuracy throughout the system.
+They were implemented based on direct user feedback and testing, which helped uncover unclear processes and common drop-off points.
+As a result, user registration time has been reduced from six minutes to under two minutes, improving operational efficiency during peak periods.
 </ProjectSectionText>
 
             </motion.div>

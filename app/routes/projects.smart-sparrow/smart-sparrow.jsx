@@ -111,9 +111,9 @@ export const SmartSparrow = () => {
 
 
               <ProjectSectionText className={styles.projectText}>
-              This interface supports a smooth and intuitive shopping journey that includes product selection, cart management, checkout, and order history.
-Built with React and TypeScript, the system handles input dynamically, validates user actions in real time, and maintains a consistent state throughout.
-Designed with clarity and responsiveness in mind, the flow ensures confidence and ease across devices, especially on mobile.
+              This interface provides a seamless and intuitive shopping experience, covering product selection, cart management, checkout, and access to order history.
+Developed with React and TypeScript, it processes user input dynamically, validates actions in real time, and maintains consistent application state.
+With a focus on clarity and responsiveness, the user flow ensures a smooth and confident experience across devices, particularly on mobile.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
@@ -147,9 +147,9 @@ Designed with clarity and responsiveness in mind, the flow ensures confidence an
 
 
               <ProjectSectionText className={styles.projectText}>
-              This section brings together essential user interactions such as signing in, editing profiles, and managing payment details.
-              All features are designed to work seamlessly with responsive layouts and consistent behavior across the application.
-              The result is a clear and uninterrupted flow that helps users stay focused and in control of their actions.
+              This section serves as a unified interface for critical user operations such as signing in, editing profiles, and managing payment details.
+All functions are engineered for consistent interaction and high usability across various devices, maintaining a seamless and intuitive experience without compromising the quality of user engagement.
+By preserving the natural flow of visual attention and user intent throughout the interaction, the system delivers a cohesive journey from initiation to completion, thereby strengthening the product’s overall reliability and user comfort.
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
