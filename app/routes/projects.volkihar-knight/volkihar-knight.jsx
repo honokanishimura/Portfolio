@@ -4,6 +4,7 @@
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 
+
 import volkiharBackgroundLarge from '~/assets/Waha-background.png';
 import volkiharBackgroundPlaceholder from '~/assets/Waha-background.png';
 import volkiharBackground from '~/assets/Waha-background.png';
@@ -29,6 +30,9 @@ import {
   ProjectSectionText,
 } from '~/layouts/project';
 
+
+import { useTheme } from '~/components/theme-provider';
+
 import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './volkihar-knight.module.css';
@@ -48,7 +52,7 @@ export function VolkiharKnight() {
 
   const { theme } = useTheme();
   const isDark = theme === 'dark';
-  
+
   return (
     <Fragment>
       <ProjectContainer>
