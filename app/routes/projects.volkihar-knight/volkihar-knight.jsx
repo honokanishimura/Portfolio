@@ -73,12 +73,20 @@ export function VolkiharKnight() {
               <ProjectSectionHeading className={styles.projectHeading}>
                 Member Management at Scale
               </ProjectSectionHeading>
+
+
               <ProjectSectionText className={styles.projectText}>
-                Designed a centralized admin module to manage thousands of users across regions. Core functionalities include batch CSV imports, user lifecycle tracking, and granular permission structures.
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
-                The UI dynamically reflects real-time status updates using Eloquent ORM relationships, ensuring both transparency and scalability.
-              </ProjectSectionText>
+              This administrator dashboard serves as the control hub for all user management operations, offering real-time insights into active sessions, user statuses, and access roles across different departments.
+              Designed with scalability in mind, the interface supports dynamic data rendering through Eloquent ORM, ensuring that even large-scale datasets remain responsive and up-to-date without page reloads.
+              A key feature includes the CSV import pipeline with automatic schema mapping and validation, streamlining bulk onboarding while preventing duplicate entries and structural conflicts.
+              Administrators benefit from detailed activity logs and role-based filtering options, allowing precise tracking of permission changes and workflow transitions within the organization.
+  From a UX standpoint, the dashboard prioritizes clarity—each widget and data panel adapts contextually, showing only the relevant fields based on user role, region, and operational scope.
+</ProjectSectionText>
+
+
+
+
+
               <ProjectSectionText className={styles.projectText}>
                 <strong>Key features:</strong>
                 <ul style={{ paddingLeft: '1.5em', listStyleType: 'disc' }}>
@@ -93,7 +101,7 @@ export function VolkiharKnight() {
         </ProjectSection>
 
         {/* Admin Dashboard Image */}
-        <ProjectSection padding="top">
+        <ProjectSection padding="none">
           <ProjectSectionContent>
             <ProjectImage
               className="image-trim-fix"
