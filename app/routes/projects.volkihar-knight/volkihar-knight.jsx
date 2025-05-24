@@ -4,16 +4,10 @@
 import { Fragment } from 'react';
 import { motion } from 'framer-motion';
 
-
 import volkiharBackgroundLarge from '~/assets/Waha-background.png';
 import volkiharBackgroundPlaceholder from '~/assets/Waha-background.png';
 import volkiharBackground from '~/assets/Waha-background.png';
 
-import volkiharBannerLarge from '~/assets/volkihar-banner-large.jpg';
-import volkiharBannerPlaceholder from '~/assets/volkihar-banner-placeholder.jpg';
-import volkiharBanner from '~/assets/volkihar-banner.jpg';
-
-import WahaBuild from '~/assets/Waha-admin-dashboard.png';
 import WahaHero from '~/assets/Waha-dashboard.png';
 import WahaAll from '~/assets/Waha-all.png';
 
@@ -30,9 +24,7 @@ import {
   ProjectSectionText,
 } from '~/layouts/project';
 
-
 import { useTheme } from '~/components/theme-provider';
-
 import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './volkihar-knight.module.css';
@@ -49,14 +41,13 @@ const roles = [
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export function VolkiharKnight() {
-
   const { theme } = useTheme();
   const isDark = theme === 'dark';
 
   return (
     <Fragment>
       <ProjectContainer>
-        {/* Background hero image */}
+        {/* Hero Background */}
         <ProjectBackground
           srcSet={`${volkiharBackground} 1280w, ${volkiharBackgroundLarge} 1920w`}
           width={1280}
@@ -65,7 +56,7 @@ export function VolkiharKnight() {
           opacity={0.5}
         />
 
-        {/* Project title, description, and roles */}
+        {/* Header */}
         <ProjectHeader
           title={title}
           description={description}
@@ -73,23 +64,23 @@ export function VolkiharKnight() {
           roles={roles}
         />
 
-        {/* Hero section with main dashboard UI */}
+        {/* Section: Main Admin Dashboard */}
         <ProjectSection padding="top">
           <ProjectSectionContent>
             <ProjectImage
+              className="image-trim-fix"
               srcSet={`${WahaHero} 800w, ${WahaHero} 1100w`}
               width={800}
               height={436}
-              placeholder={volkiharBannerPlaceholder}
-              alt="Waha Dashboard Hero Image"
-              sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
+              alt="Main Admin Dashboard"
+              sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ProjectSectionContent>
         </ProjectSection>
 
-        {/* Section 1 */}
+        {/* Section: Member Management */}
         <ProjectSection>
-          <div className={styles.projectSectionRow}>
+          <ProjectSectionContent>
             <motion.div
               className={styles.projectTextRow}
               initial={{ y: 80, opacity: 0 }}
@@ -98,30 +89,27 @@ export function VolkiharKnight() {
               viewport={{ once: true }}
             >
               <ProjectSectionHeading className={styles.projectHeading}>
-                Laravel Member Management
+                Centralized Member Administration
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
-                Designed and implemented a scalable member management module for an enterprise-grade ETL platform, using Laravel and MySQL to ensure maintainable architecture and high reliability.
+                Developed a robust member management system to support enterprise-level user operations. Built with Laravel and MySQL, the module supports stable, scalable team management workflows.
               </ProjectSectionText>
               <ProjectSectionText className={styles.projectText}>
-                Core features include:
+                Key functions:
                 <ul style={{ paddingLeft: '1.2em', listStyleType: 'disc' }}>
-                  <li>CSV-based bulk registration</li>
-                  <li>Status-based filtering</li>
-                  <li>Profile editing and login history tracking</li>
+                  <li>Bulk CSV imports for mass onboarding</li>
+                  <li>Smart filtering by user status</li>
+                  <li>Editable profiles with access history</li>
                 </ul>
-              </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
-                These functionalities support efficient data handling and streamline administrative workflows.
               </ProjectSectionText>
               <ProjectSectionText className={styles.projectText}>
                 <strong>Tech Stack:</strong> Laravel / Blade / MySQL
               </ProjectSectionText>
             </motion.div>
-          </div>
+          </ProjectSectionContent>
         </ProjectSection>
 
-        {/* Section 2 */}
+        {/* Section: Signup Optimization + All Views */}
         <ProjectSection>
           <ProjectSectionContent>
             <motion.div
@@ -132,39 +120,34 @@ export function VolkiharKnight() {
               viewport={{ once: true }}
             >
               <ProjectSectionHeading className={styles.projectHeading}>
-                Signup Form Optimization
+                Streamlined Signup & User Onboarding
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
-                As the entry point for an enterprise-grade ETL tool, the signup form was designed to prioritize both usability and data integrity.
+                Simplified the registration process by implementing dropdown-based forms for industry, location, and organization type.
               </ProjectSectionText>
               <ProjectSectionText className={styles.projectText}>
-                Developed using Laravel and Blade templates, the form UI includes dropdown fields for industry, location, and company size—ensuring data completeness and a smooth user experience.
+                Administrators can register over 100 users instantly via CSV upload, enabling efficient onboarding without compromising input quality.
               </ProjectSectionText>
-              <ProjectSectionText className={styles.projectText}>
-                To support large-scale onboarding, a CSV bulk import feature was implemented, allowing administrators to register 100+ users simultaneously with minimal effort.
-              </ProjectSectionText>
+            </motion.div>
+
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <Image
+                className="image-trim-fix"
+                srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
+                width={1280}
+                height={800}
+                alt="Various screens showing ETL member flows and form input"
+                sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+              />
             </motion.div>
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
-
-      {/* Final */}
-      <ProjectSection padding="none">
-      <ProjectSectionContent>
-    <ProjectImage
-      className="image-trim-fix"
-      srcSet={
-        isDark
-          ? `${WahaAll} 1280w, ${WahaAll} 2560w`
-          : `${WahaAll} 1280w, ${WahaAll} 2560w`
-      }
-      width={1280}
-      height={800}
-      alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-      sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-    />
-  </ProjectSectionContent>
-</ProjectSection>
 
       <Footer />
     </Fragment>
