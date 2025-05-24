@@ -14,7 +14,7 @@
 .projectHeading {
   max-width: 960px;
   width: 100%;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   font-size: 2.75rem;
   font-weight: 800;
   line-height: 1.3;
@@ -26,7 +26,7 @@
   width: 100%;
   font-size: 1.15rem;
   line-height: 1.8;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.8rem;
   color: #eaeaea;
   word-break: break-word;
   text-align: left;
@@ -35,6 +35,8 @@
 .image-trim-fix {
   display: block !important;
   margin: 2.5rem auto 2rem auto !important;
+  margin-top: 1.8rem !important;  /* ✅ 詰める */
+  margin-bottom: 2rem !important;
   width: 100% !important;
   max-width: 960px !important;
   height: 600px !important; /* ✅ 自然なサイズよりちょい高めに調整 */
