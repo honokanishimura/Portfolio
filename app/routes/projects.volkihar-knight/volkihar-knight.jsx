@@ -84,7 +84,7 @@ export function VolkiharKnight() {
   CSV-based bulk onboarding is supported, with automated column mapping and validation to detect duplicates and formatting errors.
   Activity logs and role-based filters provide clear visibility into permission changes and internal operations.</p>
 <p>
-  Each panel dynamically adapts to display only the most relevant information based on the user’s role, location, and current tasks, offering a streamlined and user-friendly experience.</p>
+  Each panel adapts dynamically to show only the most relevant information based on the user’s role, location, and current tasks, offering a streamlined and user-friendly experience.</p>
 </ProjectSectionText>
 
 

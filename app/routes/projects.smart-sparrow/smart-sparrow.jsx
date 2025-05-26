@@ -113,7 +113,7 @@ export const SmartSparrow = () => {
               <ProjectSectionText className={styles.projectText}> 
                 <p>
   This interface provides a seamless and intuitive shopping experience, covering product selection, cart management, checkout, and access to order history.  
-  Developed with React and TypeScript, it processes user input dynamically, validates actions in real time, and maintains consistent application state.</p>
+  Built with React and TypeScript, the system handles dynamic input, real-time validation, and consistent state management.</p>
 <p>
   With a focus on clarity and responsiveness, the user flow ensures a smooth and confident experience across devices, particularly on mobile.</p>
 </ProjectSectionText>
@@ -152,7 +152,7 @@ export const SmartSparrow = () => {
               <ProjectSectionText className={styles.projectText}>
                 <p>
   This section serves as a unified interface for critical user operations such as signing in, editing profiles, and managing payment details.
-  All functions are engineered for consistent interaction and high usability across various devices, maintaining a seamless and intuitive experience without compromising the quality of user engagement.
+  All functions are designed for consistent interaction and smooth usability across various devices, maintaining a seamless and intuitive experience without compromising the quality of user engagement.
   </p>
   <p>
   By preserving the natural flow of visual attention and user intent throughout the interaction, the system delivers a cohesive journey from initiation to completion, thereby strengthening the product’s overall reliability and user comfort.</p>

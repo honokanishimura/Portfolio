@@ -99,8 +99,7 @@ export const Slice = () => {
               <ProjectSectionHeading>Advanced Filter Logic</ProjectSectionHeading>
               <ProjectSectionText>
                 <p>
-  This filtering function allows users to refine search results by selecting multiple tags or categories, such as department or access level, to enhance search precision.
-  The content updates instantly without requiring a page reload, leveraging efficient database queries in the background.</p>
+ The filter lets users refine search results by selecting multiple tags, like department or access level, for more precise results.</p>
 <p>
   Each filter selection also updates the URL, enabling users to easily share or revisit the same view.
   The layout is optimized for seamless performance on both desktop and mobile devices. Selected results automatically scroll into view, helping users stay focused and minimizing unnecessary interaction.</p>

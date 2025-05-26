@@ -117,7 +117,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="Built a modular shopping UI using React and TypeScript."
-        description="Engineered a modular e-commerce interface optimized for speed and flexibility."
+        description="Designed for flexibility, the interface delivers a fast and adaptive e-commerce experience."
 
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
