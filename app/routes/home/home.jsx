@@ -116,8 +116,9 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="E-Commerce UI from Simulated Client Brief"
-        description="Built a modular shopping UI with React and TypeScript, based on a simulated client request."
+        title="Built a modular shopping UI using React and TypeScript."
+        description="Engineered a modular e-commerce interface optimized for speed and flexibility."
+
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
         model={{
@@ -140,7 +141,7 @@ export const Home = () => {
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
         title="No-Code ETL Integration Platform"
-        description="A GUI-based ETL tool built with Laravel and MySQL for fast, reliable data integration across sources."
+        description="Reliable and consistent data integration across multiple sources, powered by Laravel’s validation and transaction handling."
         buttonText="View website"
         buttonLink="/projects/volkihar-knight"
         model={{
