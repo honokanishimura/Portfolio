@@ -18,15 +18,11 @@ const ProfileText = ({ visible, titleId }) => (
 </Heading>
 
 <Text className={styles.description} data-visible={visible} size="l" as="p">
-I’m a full-stack developer based in Japan, with production-level experience in building applications using Laravel, React, and TypeScript. I enjoy designing scalable backend systems and crafting smooth, interactive frontend interfaces.
-One of my recent projects involved building an e-commerce platform with Next.js and server-side rendering, which improved mobile load times by approximately 40%.
+Full-stack developer in Japan with experience in Laravel, React, and TypeScript.  
+Built an e-commerce platform using Next.js and improved mobile performance by 40%.  
+Committed to writing clean code and experienced in remote collaboration across time zones, including U.S. and Europe.
 </Text>
 
-<Text className={styles.description} data-visible={visible} size="l" as="p">
-I’m fully comfortable with remote work and collaborating across time zones. I’ve worked with distributed teams using tools such as Slack, Notion, and GitHub.
-Writing clean and maintainable code is one of my key priorities. I focus on clarity and consistency to ensure that other developers can easily understand and contribute.
-My goal is to build systems that not only perform well today, but are also designed for long-term growth and maintainability.
-</Text>
 
   </Fragment>
 );
