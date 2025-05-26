@@ -150,10 +150,12 @@ export const SmartSparrow = () => {
 
 
               <ProjectSectionText className={styles.projectText}>
+                <p>
   This section serves as a unified interface for critical user operations such as signing in, editing profiles, and managing payment details.
   All functions are engineered for consistent interaction and high usability across various devices, maintaining a seamless and intuitive experience without compromising the quality of user engagement.
-
-  By preserving the natural flow of visual attention and user intent throughout the interaction, the system delivers a cohesive journey from initiation to completion, thereby strengthening the product’s overall reliability and user comfort.
+  </p>
+  <p>
+  By preserving the natural flow of visual attention and user intent throughout the interaction, the system delivers a cohesive journey from initiation to completion, thereby strengthening the product’s overall reliability and user comfort.</p>
 </ProjectSectionText>
 
             </div>
