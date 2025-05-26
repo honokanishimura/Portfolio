@@ -110,11 +110,13 @@ export const SmartSparrow = () => {
               </ProjectSectionHeading>
 
 
-              <ProjectSectionText className={styles.projectText}>
-              This interface provides a seamless and intuitive shopping experience, covering product selection, cart management, checkout, and access to order history.
-Developed with React and TypeScript, it processes user input dynamically, validates actions in real time, and maintains consistent application state.
-With a focus on clarity and responsiveness, the user flow ensures a smooth and confident experience across devices, particularly on mobile.
-              </ProjectSectionText>
+              <ProjectSectionText className={styles.projectText}> 
+  This interface provides a seamless and intuitive shopping experience, covering product selection, cart management, checkout, and access to order history.  
+  Developed with React and TypeScript, it processes user input dynamically, validates actions in real time, and maintains consistent application state.
+
+  With a focus on clarity and responsiveness, the user flow ensures a smooth and confident experience across devices, particularly on mobile.
+</ProjectSectionText>
+
             </div>
           </ProjectSectionContent>
         </ProjectSection>
@@ -147,10 +149,12 @@ With a focus on clarity and responsiveness, the user flow ensures a smooth and c
 
 
               <ProjectSectionText className={styles.projectText}>
-              This section serves as a unified interface for critical user operations such as signing in, editing profiles, and managing payment details.
-All functions are engineered for consistent interaction and high usability across various devices, maintaining a seamless and intuitive experience without compromising the quality of user engagement.
-By preserving the natural flow of visual attention and user intent throughout the interaction, the system delivers a cohesive journey from initiation to completion, thereby strengthening the product’s overall reliability and user comfort.
-              </ProjectSectionText>
+  This section serves as a unified interface for critical user operations such as signing in, editing profiles, and managing payment details.
+  All functions are engineered for consistent interaction and high usability across various devices, maintaining a seamless and intuitive experience without compromising the quality of user engagement.
+
+  By preserving the natural flow of visual attention and user intent throughout the interaction, the system delivers a cohesive journey from initiation to completion, thereby strengthening the product’s overall reliability and user comfort.
+</ProjectSectionText>
+
             </div>
           </ProjectSectionContent>
         </ProjectSection>
