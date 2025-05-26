@@ -18,6 +18,14 @@
   font-size: 2.75rem;
   font-weight: 800;
   line-height: 1.3;
+}
+
+/* テーマごとに色を分岐 */
+[data-theme='light'] .projectHeading {
+  color: #111111;
+}
+
+[data-theme='dark'] .projectHeading {
   color: #ffffff;
 }
 
