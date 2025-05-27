@@ -13,7 +13,7 @@ export const navLinks = [
   },
   {
     label: 'Resume',
-    pathname: 'https://docs.google.com/document/d/1yXbXzaLTlC7Cb3q3M70yiiKiJFy7jZAeGnYA_26d_ag/edit?usp=sharing',
+    pathname: '/resume.pdf',
   },
   
   {
