@@ -61,22 +61,38 @@ export const Navbar = () => {
       <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
 
       <nav className={styles.nav}>
-        <div className={styles.navList}>
-          {navLinks.map(({ label, pathname }) => (
-            <RouterLink
-              unstable_viewTransition
-              prefetch="intent"
-              to={pathname}
-              key={label}
-              data-navbar-item
-              className={styles.navLink}
-              aria-current={getCurrent(pathname)}
-              onClick={handleNavItemClick}
-            >
-              {label}
-            </RouterLink>
-          ))}
-        </div>
+  <div className={styles.navList}>
+    {navLinks.map(({ label, pathname }) => {
+      const isPDF = pathname.endsWith('.pdf');
+
+      return isPDF ? (
+        <a
+          key={label}
+          href={pathname}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-navbar-item
+          className={styles.navLink}
+        >
+          {label}
+        </a>
+      ) : (
+        <RouterLink
+          unstable_viewTransition
+          prefetch="intent"
+          to={pathname}
+          key={label}
+          data-navbar-item
+          className={styles.navLink}
+          aria-current={getCurrent(pathname)}
+          onClick={handleNavItemClick}
+        >
+          {label}
+        </RouterLink>
+      );
+    })}
+  </div>
+
 
         <ThemeToggle />
 
