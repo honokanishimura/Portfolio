@@ -44,13 +44,12 @@ import imageSprDesignSystemDark from '~/assets/Hyo-all.png';
 const title = 'React-Based Furniture E-Commerce Platform';
 
 const description =
-  'Developed a complete shopping experience using React and TypeScript—covering product display, cart, checkout, and order history—with centralized state management and mock API integration.';
-
-const roles = [
-  'React / TypeScript',
-  'Remix / Node.js / Vite',
-  'Mock API / DB',
-  'UI / UX Design'
+  'Built the flow from product list to purchase and history display using React and TypeScript';
+  const roles = [
+    'React / TypeScript',
+    'Remix / API Integration',
+    'Responsive UI / UX',
+  
 ];
 
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
@@ -112,10 +111,13 @@ export const SmartSparrow = () => {
 
               <ProjectSectionText className={styles.projectText}> 
                 <p>
-  This interface provides a seamless and intuitive shopping experience, covering product selection, cart management, checkout, and access to order history.  
-  Built with React and TypeScript, the system handles dynamic input, real-time validation, and consistent state management.</p>
+                  
+The UI allows you to select products, add them to your cart, and check your purchase history in one go.
+                </p>
 <p>
-  With a focus on clarity and responsiveness, the user flow ensures a smooth and confident experience across devices, particularly on mobile.</p>
+A stress-free website that is easy to use, clearly visible, and works on any device. It has a lightweight and fast mechanism, and performance is also taken into consideration.
+</p>
+
 </ProjectSectionText>
 
             </div>
@@ -145,17 +147,18 @@ export const SmartSparrow = () => {
 
             <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-              Designing Trust Through Account Interactions
+              UI list that creates a smooth purchasing flow
               </ProjectSectionHeading>
 
 
               <ProjectSectionText className={styles.projectText}>
                 <p>
-  This section serves as a unified interface for critical user operations such as signing in, editing profiles, and managing payment details.
-  All functions are designed for consistent interaction and smooth usability across various devices, maintaining a seamless and intuitive experience without compromising the quality of user engagement.
-  </p>
+  
+The process from purchase to history confirmation is designed to be smooth,
+and in addition to input processing and status management,
+APIs and data storage are also built in the Cloudflare environment.</p>
   <p>
-  By preserving the natural flow of visual attention and user intent throughout the interaction, the system delivers a cohesive journey from initiation to completion, thereby strengthening the product’s overall reliability and user comfort.</p>
+  A practical configuration with user registration, profile editing, and contact functions</p>
 </ProjectSectionText>
 
             </div>

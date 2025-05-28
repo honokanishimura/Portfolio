@@ -117,7 +117,6 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         title="Built a modular shopping UI using React and TypeScript."
-        description="Designed for flexibility, the interface delivers a fast and adaptive e-commerce experience."
 
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
@@ -141,7 +140,6 @@ export const Home = () => {
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
         title="No-Code ETL Integration Platform"
-        description="Reliable and consistent data integration across multiple sources, powered by Laravel’s validation and transaction handling."
         buttonText="View website"
         buttonLink="/projects/volkihar-knight"
         model={{
@@ -167,7 +165,6 @@ export const Home = () => {
         visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="Supporting Small Business Solutions"
-        description="Helped solve real business challenges with efficient tools and clear interfaces"
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
