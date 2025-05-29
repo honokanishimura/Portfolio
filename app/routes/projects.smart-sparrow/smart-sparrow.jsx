@@ -1,7 +1,7 @@
-// SmartSparrow.jsx — Project detail page for a furniture e-commerce app
-// Enhanced with responsive expandable content sections for mobile users
+// SmartSparrow.jsx — Unified with VolkiharKnight.jsx structure
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Fragment } from 'react';
+import { motion } from 'framer-motion';
 
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
@@ -20,6 +20,7 @@ import {
 
 import { baseMeta } from '~/utils/meta';
 import { media } from '~/utils/style';
+
 import styles from './smart-sparrow.module.css';
 
 import backgroundSpr from '~/assets/spr-background.jpg';
@@ -34,32 +35,25 @@ import imageSprComponentsDark from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsDarkLarge from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsLight from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsLightLarge from '~/assets/Hyo-ramdom-mobo.png';
+
 import imageSprDesignSystemDark from '~/assets/Hyo-all.png';
 
 const title = 'React-Based Furniture E-Commerce Platform';
 const description = 'Built the flow from product list to purchase and history display using React and TypeScript';
-const roles = ['React / TypeScript', 'Remix / API Integration', 'Responsive UI / UX'];
+const roles = [
+  'React / TypeScript',
+  'Remix / API Integration',
+  'Responsive UI / UX',
+];
 
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
-function useIsMobile(breakpoint = 768) {
-  const [isMobile, setIsMobile] = useState(false);
-  useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= breakpoint);
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, [breakpoint]);
-  return isMobile;
-}
-
-export const SmartSparrow = () => {
+export function SmartSparrow() {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
-  const isMobile = useIsMobile();
+  const [bgLoaded, setBgLoaded] = useState(false);
   const [isExpandedSection1, setIsExpandedSection1] = useState(false);
   const [isExpandedSection2, setIsExpandedSection2] = useState(false);
-  const [bgLoaded, setBgLoaded] = useState(false);
 
   useEffect(() => {
     const preloadImg = new window.Image();
@@ -68,7 +62,7 @@ export const SmartSparrow = () => {
   }, []);
 
   return (
-    <>
+    <Fragment>
       <ProjectContainer>
         {bgLoaded && (
           <ProjectBackground
@@ -100,43 +94,36 @@ export const SmartSparrow = () => {
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Furniture product UI"
             />
-
-            <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
+            <div className={styles.projectTextRow}>
               <ProjectSectionHeading className={styles.projectHeading}>
                 Seamless Purchase Flow from Product to Confirmation
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
-                {isMobile ? (
-                  <>
-                    <p>
-                      {isExpandedSection1 ? (
-                        <>
-                          The UI allows you to select products, add them to your cart, and check your purchase history. It is a stress-free website that is easy to use, easy to view, and works on any device. It has a lightweight and fast mechanism, and is performance-conscious. Developed as a fully functional e-commerce system operations in mind, both in terms of design and functionality.
-                        </>
-                      ) : (
-                        <>The UI allows you to select products, add them to your cart...</>
-                      )}
-                    </p>
-                    <button
-                      onClick={() => setIsExpandedSection1(!isExpandedSection1)}
-                      style={{
-                        marginTop: '8px',
-                        background: 'none',
-                        border: 'none',
-                        color: '#007bff',
-                        cursor: 'pointer',
-                        padding: 0,
-                        fontSize: '1rem',
-                      }}
-                    >
-                      {isExpandedSection1 ? 'Less' : 'More'}
-                    </button>
-                  </>
-                ) : (
-                  <p>
-                    The UI allows you to select products, add them to your cart, and check your purchase history. It is a stress-free website that is easy to use, easy to view, and works on any device. It has a lightweight and fast mechanism, and is performance-conscious. Developed as a fully functional e-commerce system operations in mind, both in terms of design and functionality.
-                  </p>
-                )}
+                <>
+                  {isExpandedSection1 ? (
+                    <>
+                      <p>
+                        The UI allows you to select products, add them to your cart, and check your purchase history. It is a stress-free website that is easy to use, easy to view, and works on any device. It has a lightweight and fast mechanism, and is performance-conscious. Developed as a fully functional e-commerce system with operations in mind, both in terms of design and functionality.
+                      </p>
+                    </>
+                  ) : (
+                    <p>The UI allows you to select products, add them to your cart, and check your purchase history...</p>
+                  )}
+                  <button
+                    onClick={() => setIsExpandedSection1(!isExpandedSection1)}
+                    style={{
+                      marginTop: '8px',
+                      background: 'none',
+                      border: 'none',
+                      color: '#007bff',
+                      cursor: 'pointer',
+                      padding: 0,
+                      fontSize: '1rem',
+                    }}
+                  >
+                    {isExpandedSection1 ? 'Less' : 'More'}
+                  </button>
+                </>
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
@@ -154,58 +141,53 @@ export const SmartSparrow = () => {
               }
               width={1280}
               height={800}
-              placeholder={isDark ? imageSprComponentsDark : imageSprComponentsLight}
+              placeholder={
+                isDark
+                  ? imageSprComponentsDark
+                  : imageSprComponentsLight
+              }
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Account form interface"
             />
-
-            <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
+            <div className={styles.projectTextRow}>
               <ProjectSectionHeading className={styles.projectHeading}>
-                UI list that creates a smooth purchasing flow
+                UI List that Creates a Smooth Purchasing Flow
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
-                {isMobile ? (
-                  <>
-                    <p>
-                      {isExpandedSection2 ? (
-                        <>
-                          The process from purchase to history confirmation is designed to be smooth, and in addition to input processing and status management, APIs and data storage are also built in the Cloudflare environment. A practical configuration with user registration, profile editing, and contact functions.
-                        </>
-                      ) : (
-                        <>The process from purchase to history confirmation is designed to be smooth...</>
-                      )}
-                    </p>
-                    <button
-                      onClick={() => setIsExpandedSection2(!isExpandedSection2)}
-                      style={{
-                        marginTop: '8px',
-                        background: 'none',
-                        border: 'none',
-                        color: '#007bff',
-                        cursor: 'pointer',
-                        padding: 0,
-                        fontSize: '1rem',
-                      }}
-                    >
-                      {isExpandedSection2 ? 'Less' : 'More'}
-                    </button>
-                  </>
-                ) : (
-                  <>
-                    <p>
-                      The process from purchase to history confirmation is designed to be smooth, and in addition to input processing and status management, APIs and data storage are also built in the Cloudflare environment.
-                    </p>
-                    <p>
-                      A practical configuration with user registration, profile editing, and contact functions.
-                    </p>
-                  </>
-                )}
+                <>
+                  {isExpandedSection2 ? (
+                    <>
+                      <p>
+                        The process from purchase to history confirmation is designed to be smooth, and in addition to input processing and status management, APIs and data storage are also built in the Cloudflare environment.
+                      </p>
+                      <p>
+                        A practical configuration with user registration, profile editing, and contact functions.
+                      </p>
+                    </>
+                  ) : (
+                    <p>The process from purchase to history confirmation is designed to be smooth...</p>
+                  )}
+                  <button
+                    onClick={() => setIsExpandedSection2(!isExpandedSection2)}
+                    style={{
+                      marginTop: '8px',
+                      background: 'none',
+                      border: 'none',
+                      color: '#007bff',
+                      cursor: 'pointer',
+                      padding: 0,
+                      fontSize: '1rem',
+                    }}
+                  >
+                    {isExpandedSection2 ? 'Less' : 'More'}
+                  </button>
+                </>
               </ProjectSectionText>
             </div>
           </ProjectSectionContent>
         </ProjectSection>
 
-        {/* Final Full View */}
+        {/* Final Section */}
         <ProjectSection padding="none">
           <ProjectSectionContent>
             <ProjectImage
@@ -219,8 +201,7 @@ export const SmartSparrow = () => {
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
-
       <Footer />
-    </>
+    </Fragment>
   );
-};
+}
