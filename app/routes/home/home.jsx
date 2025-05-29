@@ -116,7 +116,7 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Built a modular shopping UI using React and TypeScript."
+        title="Built a modular shopping UI using React and TypeScript"
 
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"

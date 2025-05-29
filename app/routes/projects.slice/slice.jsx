@@ -2,6 +2,7 @@
 // This showcases multi- and single-condition filters using Laravel + SQLite + FTS5 backend
 
 import { Fragment } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 // Layout components used throughout project detail pages
@@ -28,29 +29,47 @@ import styles from './slice.module.css';
 // Static assets
 import sliceApp from '~/assets/1-1_Project-1_landing-dm.png';
 import sliceAppLarge from '~/assets/1-1_Project-1_landing-dm.png';
-import sliceAppPlaceholder from '~/assets/1-1_Project-1_landing-dm.png';
 
 import sliceBackground from '~/assets/1-1-0_Project-1_background.jpg';
 import sliceBackgroundLarge from '~/assets/1-1-0_Project-1_background.jpg';
-import sliceBackgroundPlaceholder from '~/assets/1-1-0_Project-1_background.jpg';
 
 import sliceSidebarAnnotations from '~/assets/1-2_Project-1_filter-m.png';
 import sliceSidebarAnnotationsLarge from '~/assets/1-2_Project-1_filter-m.png';
-import sliceSidebarAnnotationsPlaceholder from '~/assets/1-2_Project-1_filter-m.png';
 
 import sliceSlides from '~/assets/1-3_Project-1_pagetype-m.png';
 import sliceSlidesLarge from '~/assets/1-3_Project-1_pagetype-m.png';
-import sliceSlidesPlaceholder from '~/assets/1-3_Project-1_pagetype-m.png';
 
-// Meta information for SEO and social media
-const title = 'Business Challenge Visualization System';
+
+// More 
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= breakpoint);
+    };
+    handleResize(); // 初期判定
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
+
+const title = 'Advanced Search Filter for Business Dashboard';
 const description =
-  'Built a CMS to help SMEs find and solve challenges through structured support content. Focused on clarity, speed, and ease of use.';
-const roles = ['PHP(Laravel)', 'SQLite', 'Full-Text Search Integration'];
+  'Implemented a search filtering system in a CMS to help SMEs quickly access relevant support content';
+const roles = ['PHP(Laravel)', 'SQLite'];
 
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export const Slice = () => {
+
+  const [isExpanded, setIsExpanded] = useState(false);
+  const isMobile = useIsMobile();
+
+
   return (
     <Fragment>
       <ProjectContainer className={styles.slice}>
@@ -79,7 +98,6 @@ export const Slice = () => {
               srcSet={`${sliceApp} 800w, ${sliceAppLarge} 1920w`}
               width={800}
               height={500}
-              placeholder={sliceAppPlaceholder}
               alt="The Slice web application showing a selected user annotation."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
@@ -97,13 +115,49 @@ export const Slice = () => {
               viewport={{ once: true }}
             >
               <ProjectSectionHeading>Advanced Filter Logic</ProjectSectionHeading>
+
+
               <ProjectSectionText>
-                <p>
- The filter lets users refine search results by selecting multiple tags, like department or access level, for more precise results.</p>
-<p>
-  Each filter selection also updates the URL, enabling users to easily share or revisit the same view.
-  The layout is optimized for seamless performance on both desktop and mobile devices. Selected results automatically scroll into view, helping users stay focused and minimizing unnecessary interaction.</p>
+  {isMobile ? (
+    <>
+      <p>
+        {isExpanded ? (
+          <>
+            Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page. The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access.
+            <br />
+            The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility. The click area is also wide, reducing user fatigue.
+          </>
+        ) : (
+          <>
+            Tab-based filters allow to surface the most relevant content by selecting one industry at a time...
+          </>
+        )}
+      </p>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        style={{
+          marginTop: '8px',
+          background: 'none',
+          border: 'none',
+          color: '#007bff',
+          cursor: 'pointer',
+          padding: 0,
+          fontSize: '1rem'
+        }}
+      >
+        {isExpanded ? 'Less' : 'More'}
+      </button>
+    </>
+  ) : (
+    <p>
+      Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page. The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access.
+      <br />
+      The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility. The click area is also wide, reducing user fatigue.
+    </p>
+  )}
 </ProjectSectionText>
+
+
 
 
             </motion.div>
@@ -121,7 +175,6 @@ export const Slice = () => {
                 srcSet={`${sliceSidebarAnnotations} 350w, ${sliceSidebarAnnotationsLarge} 700w`}
                 width={350}
                 height={750}
-                placeholder={sliceSidebarAnnotationsPlaceholder}
                 alt="Multiple user annotations on a shared layer."
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
@@ -141,15 +194,50 @@ export const Slice = () => {
             >
               <ProjectSectionHeading>Single-Condition Filtering</ProjectSectionHeading>
               <ProjectSectionText>
-                <p>
-  The tab-based filter allows users to select a single industry at a time, such as Finance, Healthcare, or Education, and immediately view the most relevant content.
-  When a tab is clicked, the content updates instantly without reloading the page. The selected tab is reflected in the URL (for example, <code>?id=2</code>), making it easy to share the view or return to it later.
-  </p>
-<p>
-  The layout is responsive and designed for smooth use on both desktop and mobile devices, with large clickable areas for better accessibility.
-  Built with React, the filter delivers high performance and allows for easy maintenance and future improvements.
-  </p>
+  {isMobile ? (
+    <>
+      <p>
+        {isExpanded ? (
+          <>
+            Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
+            The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access.
+            <br />
+            The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility. The click area is also wide, reducing user fatigue.
+          </>
+        ) : (
+          <>
+            Tab-based filters allow to surface the most relevant content by selecting one industry at a time...
+          </>
+        )}
+      </p>
+      <button
+        onClick={() => setIsExpanded(!isExpanded)}
+        style={{
+          marginTop: '8px',
+          background: 'none',
+          border: 'none',
+          color: '#007bff',
+          cursor: 'pointer',
+          padding: 0,
+          fontSize: '1rem'
+        }}
+      >
+        {isExpanded ? 'Less' : 'More'}
+      </button>
+    </>
+  ) : (
+    <>
+      <p>
+        Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
+        The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access.
+      </p>
+      <p>
+        The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility. The click area is also wide, reducing user fatigue.
+      </p>
+    </>
+  )}
 </ProjectSectionText>
+
 
 
             </motion.div>
@@ -165,7 +253,6 @@ export const Slice = () => {
                 srcSet={`${sliceSlides} 1200w, ${sliceSlidesLarge} 1920w`}
                 width={1200}
                 height={800}
-                placeholder={sliceSlidesPlaceholder}
                 alt="The new My Slides tab in slice, showing annotated and favorited slides."
                 sizes="100vw"
                 className={styles.fullscreenImage}

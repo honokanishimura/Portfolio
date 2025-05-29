@@ -28,8 +28,8 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './volkihar-knight.module.css';
 
-const title = 'Enterprise ETL Platform for Unified Data Operations';
-const description = 'Built with Laravel and MySQL, this platform enables centralized member control, efficient onboarding, and adaptive UX for enterprise users.';
+const title = 'A CMS-type ETL management tool that supports Unirita internal operations';
+const description = 'Created a practical CMS for administrators using Laravel and MySQL';
 const roles = [
   'Laravel',
   'MySQL',
@@ -77,15 +77,16 @@ export function VolkiharKnight() {
 
               <ProjectSectionText className={styles.projectText}>
                 <p>
-  The central dashboard allows administrators to manage all users, with real-time visibility into session activity, user status, and department-specific access levels.
-  By leveraging Eloquent ORM, the system ensures smooth real-time updates and maintains responsiveness for large datasets without requiring full page reloads.</p>
+                Administrators can manage all users through a dashboard, with real-time visibility into session activity, user status, and department-specific access.
+                By leveraging Eloquent ORM, the system ensures smooth real-time updates, staying responsive for large data sets without full page reloads
+                </p>
 
-<p>
-  CSV-based bulk onboarding is supported, with automated column mapping and validation to detect duplicates and formatting errors.
-  Activity logs and role-based filters provide clear visibility into permission changes and internal operations.</p>
-<p>
-  Each panel adapts dynamically to show only the most relevant information based on the user’s role, location, and current tasks, offering a streamlined and user-friendly experience.</p>
-</ProjectSectionText>
+                <p>
+                CSV-based bulk onboarding is supported, with automated column mapping and validation to
+                perceive overlapping and formatting errors. 
+                Activity logs and role-based filters provide clear visibility into permission changes and internal operations
+                </p>
+              </ProjectSectionText>
 
 
 
@@ -141,8 +142,7 @@ export function VolkiharKnight() {
               <ProjectSectionText className={styles.projectText}>
                 <p>
   User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus.
-  The system supports bulk CSV uploads, automatically matching column names even when file formats do not fully align.
-  These improvements have reduced onboarding errors by over 90%, saving time and enhancing data accuracy throughout the system.
+  The system supports bulk CSV uploads, automatically matching 
   </p>
   <p>
   They were implemented based on direct user feedback and testing, which helped uncover unclear processes and common drop-off points.

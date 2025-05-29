@@ -112,12 +112,8 @@ export const SmartSparrow = () => {
               <ProjectSectionText className={styles.projectText}> 
                 <p>
                   
-The UI allows you to select products, add them to your cart, and check your purchase history in one go.
-                </p>
-<p>
-A stress-free website that is easy to use, clearly visible, and works on any device. It has a lightweight and fast mechanism, and performance is also taken into consideration.
-</p>
-
+                The UI allows you to select products, add them to your cart, and check your purchase history. It is a stress-free website that is easy to use, easy to view, and works on any device. It has a lightweight and fast mechanism, and is performance-conscious. Developed as a fully functional e-commerce system
+operations in mind, both in terms of design and functionality.</p>
 </ProjectSectionText>
 
             </div>
@@ -156,7 +152,7 @@ A stress-free website that is easy to use, clearly visible, and works on any dev
   
 The process from purchase to history confirmation is designed to be smooth,
 and in addition to input processing and status management,
-APIs and data storage are also built in the Cloudflare environment.</p>
+APIs and data storage are also built in the Cloudflare environment</p>
   <p>
   A practical configuration with user registration, profile editing, and contact functions</p>
 </ProjectSectionText>
