@@ -1,5 +1,5 @@
 // Slice.jsx — Project detail page for a CMS with advanced filtering features
-// Structure fully unified with VolkiharKnight.jsx
+// Structure fully unified with VolkiharKnight.jsx, More/Less only on mobile
 
 import { Fragment, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
@@ -34,11 +34,26 @@ const title = 'Advanced Search Filter for Business Dashboard';
 const description = 'Implemented a search filtering system in a CMS to help SMEs quickly access relevant support content';
 const roles = ['PHP(Laravel)', 'SQLite'];
 
+function useIsMobile(breakpoint = 768) {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= breakpoint);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [breakpoint]);
+  return isMobile;
+}
+
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export function Slice() {
   const [isExpandedSection1, setIsExpandedSection1] = useState(false);
   const [isExpandedSection2, setIsExpandedSection2] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <Fragment>
@@ -72,34 +87,45 @@ export function Slice() {
                 Advanced Filter Logic
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
-                <>
-                  {isExpandedSection1 ? (
-                    <>
-                      <p>
-                        Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
-                      </p>
-                      <p>
-                        The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access. The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility.
-                      </p>
-                    </>
-                  ) : (
-                    <p>Tab-based filters allow to surface the most relevant content by selecting one industry at a time...</p>
-                  )}
-                  <button
-                    onClick={() => setIsExpandedSection1(!isExpandedSection1)}
-                    style={{
-                      marginTop: '8px',
-                      background: 'none',
-                      border: 'none',
-                      color: '#007bff',
-                      cursor: 'pointer',
-                      padding: 0,
-                      fontSize: '1rem',
-                    }}
-                  >
-                    {isExpandedSection1 ? 'Less' : 'More'}
-                  </button>
-                </>
+                {isMobile ? (
+                  <>
+                    {isExpandedSection1 ? (
+                      <>
+                        <p>
+                          Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
+                        </p>
+                        <p>
+                          The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access. The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility.
+                        </p>
+                      </>
+                    ) : (
+                      <p>Tab-based filters allow to surface the most relevant content by selecting one industry at a time...</p>
+                    )}
+                    <button
+                      onClick={() => setIsExpandedSection1(!isExpandedSection1)}
+                      style={{
+                        marginTop: '8px',
+                        background: 'none',
+                        border: 'none',
+                        color: '#007bff',
+                        cursor: 'pointer',
+                        padding: 0,
+                        fontSize: '1rem',
+                      }}
+                    >
+                      {isExpandedSection1 ? 'Less' : 'More'}
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <p>
+                      Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
+                    </p>
+                    <p>
+                      The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access. The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility.
+                    </p>
+                  </>
+                )}
               </ProjectSectionText>
             </motion.div>
           </ProjectSectionContent>
@@ -131,34 +157,45 @@ export function Slice() {
                 Single-Condition Filtering
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
-                <>
-                  {isExpandedSection2 ? (
-                    <>
-                      <p>
-                        This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views.
-                      </p>
-                      <p>
-                        Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming.
-                      </p>
-                    </>
-                  ) : (
-                    <p>This section allows filtering by a single condition such as category or tag...</p>
-                  )}
-                  <button
-                    onClick={() => setIsExpandedSection2(!isExpandedSection2)}
-                    style={{
-                      marginTop: '8px',
-                      background: 'none',
-                      border: 'none',
-                      color: '#007bff',
-                      cursor: 'pointer',
-                      padding: 0,
-                      fontSize: '1rem',
-                    }}
-                  >
-                    {isExpandedSection2 ? 'Less' : 'More'}
-                  </button>
-                </>
+                {isMobile ? (
+                  <>
+                    {isExpandedSection2 ? (
+                      <>
+                        <p>
+                          This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views.
+                        </p>
+                        <p>
+                          Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming.
+                        </p>
+                      </>
+                    ) : (
+                      <p>This section allows filtering by a single condition such as category or tag...</p>
+                    )}
+                    <button
+                      onClick={() => setIsExpandedSection2(!isExpandedSection2)}
+                      style={{
+                        marginTop: '8px',
+                        background: 'none',
+                        border: 'none',
+                        color: '#007bff',
+                        cursor: 'pointer',
+                        padding: 0,
+                        fontSize: '1rem',
+                      }}
+                    >
+                      {isExpandedSection2 ? 'Less' : 'More'}
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <p>
+                      This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views.
+                    </p>
+                    <p>
+                      Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming.
+                    </p>
+                  </>
+                )}
               </ProjectSectionText>
             </motion.div>
           </ProjectSectionContent>

@@ -1,12 +1,14 @@
-// SmartSparrow.jsx — Unified with VolkiharKnight.jsx structure
+// SmartSparrow.jsx — Project detail page for a furniture e-commerce app
+// This page showcases UI/UX improvements, form state handling, and user features using React/TypeScript
 
-import { useEffect, useState, Fragment } from 'react';
-import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
+// Reusable components
 import { Footer } from '~/components/footer';
 import { Image } from '~/components/image';
 import { useTheme } from '~/components/theme-provider';
 
+// Layout components for structured project presentation
 import {
   ProjectBackground,
   ProjectContainer,
@@ -16,6 +18,7 @@ import {
   ProjectSectionContent,
   ProjectSectionHeading,
   ProjectSectionText,
+  ProjectTextRow,
 } from '~/layouts/project';
 
 import { baseMeta } from '~/utils/meta';
@@ -23,6 +26,7 @@ import { media } from '~/utils/style';
 
 import styles from './smart-sparrow.module.css';
 
+// Background and section image assets
 import backgroundSpr from '~/assets/spr-background.jpg';
 import backgroundSprLarge from '~/assets/spr-background-large.jpg';
 
@@ -35,26 +39,27 @@ import imageSprComponentsDark from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsDarkLarge from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsLight from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsLightLarge from '~/assets/Hyo-ramdom-mobo.png';
-
 import imageSprDesignSystemDark from '~/assets/Hyo-all.png';
 
 const title = 'React-Based Furniture E-Commerce Platform';
-const description = 'Built the flow from product list to purchase and history display using React and TypeScript';
-const roles = [
-  'React / TypeScript',
-  'Remix / API Integration',
-  'Responsive UI / UX',
+
+const description =
+  'Built the flow from product list to purchase and history display using React and TypeScript';
+  const roles = [
+    'React / TypeScript',
+    'Remix / API Integration',
+    'Responsive UI / UX',
+  
 ];
 
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
-export function SmartSparrow() {
+export const SmartSparrow = () => {
   const { theme } = useTheme();
   const isDark = theme === 'dark';
   const [bgLoaded, setBgLoaded] = useState(false);
-  const [isExpandedSection1, setIsExpandedSection1] = useState(false);
-  const [isExpandedSection2, setIsExpandedSection2] = useState(false);
 
+  // Preload the background image to reduce layout shift
   useEffect(() => {
     const preloadImg = new window.Image();
     preloadImg.src = backgroundSpr;
@@ -62,8 +67,9 @@ export function SmartSparrow() {
   }, []);
 
   return (
-    <Fragment>
+    <>
       <ProjectContainer>
+        {/* Background image for the project header */}
         {bgLoaded && (
           <ProjectBackground
             opacity={isDark ? 0.75 : 0.8}
@@ -72,6 +78,7 @@ export function SmartSparrow() {
           />
         )}
 
+        {/* Header with project title, description, and roles */}
         <ProjectHeader
           title={title}
           description={description}
@@ -79,57 +86,41 @@ export function SmartSparrow() {
           roles={roles}
         />
 
-        {/* Section 1 */}
+        {/* Section: Hero UI image (product listing) */}
         <ProjectSection padding="none">
           <ProjectSectionContent>
             <ProjectImage
               className="image-trim-fix"
               srcSet={
                 isDark
-                  ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
-                  : `${imageSprLessonBuilderLight} 1280w, ${imageSprLessonBuilderLightLarge} 2560w`
+
+                ? `${imageSprLessonBuilderDark} 1280w, ${imageSprLessonBuilderDarkLarge} 2560w`
+                : `${imageSprLessonBuilderLight} 1280w, ${imageSprLessonBuilderLightLarge} 2560w`
               }
               width={1280}
               height={800}
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Furniture product UI"
             />
-            <div className={styles.projectTextRow}>
+      
+          <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-                Seamless Purchase Flow from Product to Confirmation
+              Seamless Purchase Flow from Product to Confirmation
               </ProjectSectionHeading>
-              <ProjectSectionText className={styles.projectText}>
-                <>
-                  {isExpandedSection1 ? (
-                    <>
-                      <p>
-                        The UI allows you to select products, add them to your cart, and check your purchase history. It is a stress-free website that is easy to use, easy to view, and works on any device. It has a lightweight and fast mechanism, and is performance-conscious. Developed as a fully functional e-commerce system with operations in mind, both in terms of design and functionality.
-                      </p>
-                    </>
-                  ) : (
-                    <p>The UI allows you to select products, add them to your cart, and check your purchase history...</p>
-                  )}
-                  <button
-                    onClick={() => setIsExpandedSection1(!isExpandedSection1)}
-                    style={{
-                      marginTop: '8px',
-                      background: 'none',
-                      border: 'none',
-                      color: '#007bff',
-                      cursor: 'pointer',
-                      padding: 0,
-                      fontSize: '1rem',
-                    }}
-                  >
-                    {isExpandedSection1 ? 'Less' : 'More'}
-                  </button>
-                </>
-              </ProjectSectionText>
+
+
+              <ProjectSectionText className={styles.projectText}> 
+                <p>
+                  
+                The UI allows you to select products, add them to your cart, and check your purchase history. It is a stress-free website that is easy to use, easy to view, and works on any device. It has a lightweight and fast mechanism, and is performance-conscious. Developed as a fully functional e-commerce system
+operations in mind, both in terms of design and functionality.</p>
+</ProjectSectionText>
+
             </div>
           </ProjectSectionContent>
         </ProjectSection>
 
-        {/* Section 2 */}
+        {/* Section: 2 */}
         <ProjectSection padding="none">
           <ProjectSectionContent>
             <ProjectImage
@@ -149,59 +140,49 @@ export function SmartSparrow() {
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Account form interface"
             />
-            <div className={styles.projectTextRow}>
+
+            <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-                UI List that Creates a Smooth Purchasing Flow
+              UI list that creates a smooth purchasing flow
               </ProjectSectionHeading>
+
+
               <ProjectSectionText className={styles.projectText}>
-                <>
-                  {isExpandedSection2 ? (
-                    <>
-                      <p>
-                        The process from purchase to history confirmation is designed to be smooth, and in addition to input processing and status management, APIs and data storage are also built in the Cloudflare environment.
-                      </p>
-                      <p>
-                        A practical configuration with user registration, profile editing, and contact functions.
-                      </p>
-                    </>
-                  ) : (
-                    <p>The process from purchase to history confirmation is designed to be smooth...</p>
-                  )}
-                  <button
-                    onClick={() => setIsExpandedSection2(!isExpandedSection2)}
-                    style={{
-                      marginTop: '8px',
-                      background: 'none',
-                      border: 'none',
-                      color: '#007bff',
-                      cursor: 'pointer',
-                      padding: 0,
-                      fontSize: '1rem',
-                    }}
-                  >
-                    {isExpandedSection2 ? 'Less' : 'More'}
-                  </button>
-                </>
-              </ProjectSectionText>
+                <p>
+  
+The process from purchase to history confirmation is designed to be smooth,
+and in addition to input processing and status management,
+APIs and data storage are also built in the Cloudflare environment</p>
+  <p>
+  A practical configuration with user registration, profile editing, and contact functions</p>
+</ProjectSectionText>
+
             </div>
           </ProjectSectionContent>
         </ProjectSection>
-
-        {/* Final Section */}
-        <ProjectSection padding="none">
-          <ProjectSectionContent>
-            <ProjectImage
-              className="image-trim-fix"
-              srcSet={`${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`}
-              width={1280}
-              height={800}
-              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
       </ProjectContainer>
+
+      {/* Final */}
+      <ProjectSection padding="none">
+  <ProjectSectionContent>
+    <ProjectImage
+      className="image-trim-fix"
+      srcSet={
+        isDark
+          ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
+          : `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
+      }
+      width={1280}
+      height={800}
+      alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+      sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+    />
+  </ProjectSectionContent>
+</ProjectSection>
+
+
+      {/* Footer */}
       <Footer />
-    </Fragment>
+    </>
   );
-}
+};
