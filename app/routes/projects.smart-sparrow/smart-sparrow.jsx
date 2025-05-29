@@ -105,7 +105,7 @@ export const SmartSparrow = () => {
       
           <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-              Seamless Purchase Flow from Product to Confirmation
+              Seamless Purchase Flow from Product
               </ProjectSectionHeading>
 
 
@@ -143,7 +143,7 @@ operations in mind, both in terms of design and functionality.</p>
 
             <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-              UI list that creates a smooth purchasing flow
+              Creates Smooth Purchasing Flow
               </ProjectSectionHeading>
 
 

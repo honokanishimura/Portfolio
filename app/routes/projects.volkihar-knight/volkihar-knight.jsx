@@ -160,7 +160,7 @@ export function VolkiharKnight() {
               viewport={{ once: true }}
             >
               <ProjectSectionHeading className={styles.projectHeading}>
-                Streamlined Onboarding Workflow
+                Onboarding Workflow
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
                 {isMobile ? (
