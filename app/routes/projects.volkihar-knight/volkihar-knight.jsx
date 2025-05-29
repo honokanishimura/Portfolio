@@ -1,4 +1,4 @@
-// VolkiharKnight.jsx — Professional enterprise ETL system showcase
+// VolkiharKnight.jsx — Project detail page for an enterprise ETL platform
 
 import { Fragment, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
@@ -32,7 +32,7 @@ const title = 'A CMS-type ETL management tool that supports Unirita internal ope
 const description = 'Created a practical CMS for administrators using Laravel and MySQL';
 const roles = ['Laravel', 'MySQL', 'Enterprise UX Optimization'];
 
-function useIsMobile(breakpoint = 768) {
+function useIsMobile(breakpoint = 900) {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -86,40 +86,53 @@ export function VolkiharKnight() {
               <ProjectSectionHeading className={styles.projectHeading}>
                 Member Management at Scale
               </ProjectSectionHeading>
-
               <ProjectSectionText className={styles.projectText}>
-  <>
-    {isExpandedSection1 ? (
-      <>
-        <p>
-          Administrators can manage all users through a dashboard, with real-time visibility into session activity, user status, and department-specific access.
-        </p>
-        <p>
-          By leveraging Eloquent ORM, the system ensures smooth real-time updates, staying responsive for large data sets without full page reloads.
-          CSV-based bulk onboarding is supported, with automated column mapping and validation.
-          Activity logs and role-based filters provide clear visibility into permission changes.
-        </p>
-      </>
-    ) : (
-      <p>Administrators can manage all users through a dashboard...</p>
-    )}
-    <button
-      onClick={() => setIsExpandedSection1(!isExpandedSection1)}
-      style={{
-        marginTop: '8px',
-        background: 'none',
-        border: 'none',
-        color: '#007bff',
-        cursor: 'pointer',
-        padding: 0,
-        fontSize: '1rem',
-      }}
-    >
-      {isExpandedSection1 ? 'Less' : 'More'}
-    </button>
-  </>
-</ProjectSectionText>
-
+                {isMobile ? (
+                  <>
+                    {isExpandedSection1 ? (
+                      <>
+                        <p>
+                          Administrators can manage all users through a dashboard, with real-time visibility into session activity, user status, and department-specific access.
+                        </p>
+                        <p>
+                          By leveraging Eloquent ORM, the system ensures smooth real-time updates, staying responsive for large data sets without full page reloads.
+                          CSV-based bulk onboarding is supported, with automated column mapping and validation.
+                          Activity logs and role-based filters provide clear visibility into permission changes.
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <p>Administrators can manage all users through a dashboard, with real-time visibility into session activity...</p>
+                      </>
+                    )}
+                    <button
+                      onClick={() => setIsExpandedSection1(!isExpandedSection1)}
+                      style={{
+                        marginTop: '8px',
+                        background: 'none',
+                        border: 'none',
+                        color: '#007bff',
+                        cursor: 'pointer',
+                        padding: 0,
+                        fontSize: '1rem',
+                      }}
+                    >
+                      {isExpandedSection1 ? 'Less' : 'More'}
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <p>
+                      Administrators can manage all users through a dashboard, with real-time visibility into session activity, user status, and department-specific access.
+                    </p>
+                    <p>
+                      By leveraging Eloquent ORM, the system ensures smooth real-time updates, staying responsive for large data sets without full page reloads.
+                      CSV-based bulk onboarding is supported, with automated column mapping and validation.
+                      Activity logs and role-based filters provide clear visibility into permission changes.
+                    </p>
+                  </>
+                )}
+              </ProjectSectionText>
             </motion.div>
           </ProjectSectionContent>
         </ProjectSection>
@@ -149,43 +162,53 @@ export function VolkiharKnight() {
               <ProjectSectionHeading className={styles.projectHeading}>
                 Streamlined Onboarding Workflow
               </ProjectSectionHeading>
-
-              
-              
-
               <ProjectSectionText className={styles.projectText}>
-  <>
-    {isExpandedSection2 ? (
-      <>
-        <p>
-          User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus.
-          The system supports bulk CSV uploads, automatically matching file columns.
-        </p>
-        <p>
-          Implemented based on direct feedback, it helped uncover friction points.
-          As a result, registration time was reduced from 6 to under 2 minutes.
-        </p>
-      </>
-    ) : (
-      <p>User information such as industry, department, and company structure can be quickly and accurately entered...</p>
-    )}
-    <button
-      onClick={() => setIsExpandedSection2(!isExpandedSection2)}
-      style={{
-        marginTop: '8px',
-        background: 'none',
-        border: 'none',
-        color: '#007bff',
-        cursor: 'pointer',
-        padding: 0,
-        fontSize: '1rem',
-      }}
-    >
-      {isExpandedSection2 ? 'Less' : 'More'}
-    </button>
-  </>
-</ProjectSectionText>
-
+                {isMobile ? (
+                  <>
+                    {isExpandedSection2 ? (
+                      <>
+                        <p>
+                          User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus.
+                          The system supports bulk CSV uploads, automatically matching file columns.
+                        </p>
+                        <p>
+                          Implemented based on direct feedback, it helped uncover friction points.
+                          As a result, registration time was reduced from 6 to under 2 minutes.
+                        </p>
+                      </>
+                    ) : (
+                      <>
+                        <p>User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus...</p>
+                      </>
+                    )}
+                    <button
+                      onClick={() => setIsExpandedSection2(!isExpandedSection2)}
+                      style={{
+                        marginTop: '8px',
+                        background: 'none',
+                        border: 'none',
+                        color: '#007bff',
+                        cursor: 'pointer',
+                        padding: 0,
+                        fontSize: '1rem',
+                      }}
+                    >
+                      {isExpandedSection2 ? 'Less' : 'More'}
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <p>
+                      User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus.
+                      The system supports bulk CSV uploads, automatically matching file columns.
+                    </p>
+                    <p>
+                      Implemented based on direct feedback, it helped uncover friction points.
+                      As a result, registration time was reduced from 6 to under 2 minutes.
+                    </p>
+                  </>
+                )}
+              </ProjectSectionText>
             </motion.div>
           </ProjectSectionContent>
         </ProjectSection>
