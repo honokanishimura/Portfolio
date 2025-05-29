@@ -38,6 +38,30 @@ import sliceSidebarAnnotationsLarge from '~/assets/1-2_Project-1_filter-m.png';
 import sliceSlides from '~/assets/1-3_Project-1_pagetype-m.png';
 import sliceSlidesLarge from '~/assets/1-3_Project-1_pagetype-m.png';
 
+function ExpandableText({ shortText, fullText }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <div style={{ fontSize: '1rem' }}>
+      <p>{expanded ? fullText : shortText}</p>
+      <button
+        onClick={() => setExpanded(!expanded)}
+        style={{
+          marginTop: '8px',
+          background: 'none',
+          border: 'none',
+          color: '#007bff',
+          cursor: 'pointer',
+          padding: 0,
+          fontSize: '1rem',
+        }}
+      >
+        {expanded ? 'Less' : 'More'}
+      </button>
+    </div>
+  );
+}
+
 // Hook to detect mobile view
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(false);
@@ -64,8 +88,6 @@ export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export const Slice = () => {
   const isMobile = useIsMobile();
-  const [isExpandedSection1, setIsExpandedSection1] = useState(false);
-  const [isExpandedSection2, setIsExpandedSection2] = useState(false);
 
   return (
     <Fragment>
@@ -109,36 +131,10 @@ export const Slice = () => {
               <ProjectSectionHeading>Advanced Filter Logic</ProjectSectionHeading>
               <ProjectSectionText>
                 {isMobile ? (
-                  <>
-                    {isExpandedSection1 ? (
-                      <>
-                        <p>
-                          Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
-                        </p>
-                        <p>
-                          The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access. The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility.
-                        </p>
-                      </>
-                    ) : (
-                      <p>
-                        Tab-based filters allow to surface the most relevant content by selecting one industry at a time...
-                      </p>
-                    )}
-                    <button
-                      onClick={() => setIsExpandedSection1(!isExpandedSection1)}
-                      style={{
-                        marginTop: '8px',
-                        background: 'none',
-                        border: 'none',
-                        color: '#007bff',
-                        cursor: 'pointer',
-                        padding: 0,
-                        fontSize: '1rem',
-                      }}
-                    >
-                      {isExpandedSection1 ? 'Less' : 'More'}
-                    </button>
-                  </>
+                  <ExpandableText
+                    shortText="Tab-based filters allow to surface the most relevant content by selecting one industry at a time..."
+                    fullText="Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page. The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access. The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility."
+                  />
                 ) : (
                   <>
                     <p>
@@ -183,36 +179,10 @@ export const Slice = () => {
               <ProjectSectionHeading>Single-Condition Filtering</ProjectSectionHeading>
               <ProjectSectionText>
                 {isMobile ? (
-                  <>
-                    {isExpandedSection2 ? (
-                      <>
-                        <p>
-                          This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views.
-                        </p>
-                        <p>
-                          Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming.
-                        </p>
-                      </>
-                    ) : (
-                      <p>
-                        This section allows filtering by a single condition such as category or tag...
-                      </p>
-                    )}
-                    <button
-                      onClick={() => setIsExpandedSection2(!isExpandedSection2)}
-                      style={{
-                        marginTop: '8px',
-                        background: 'none',
-                        border: 'none',
-                        color: '#007bff',
-                        cursor: 'pointer',
-                        padding: 0,
-                        fontSize: '1rem',
-                      }}
-                    >
-                      {isExpandedSection2 ? 'Less' : 'More'}
-                    </button>
-                  </>
+                  <ExpandableText
+                    shortText="This section allows filtering by a single condition such as category or tag..."
+                    fullText="This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views. Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming."
+                  />
                 ) : (
                   <>
                     <p>
