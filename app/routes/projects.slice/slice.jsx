@@ -79,7 +79,6 @@ export const Slice = () => {
           srcSet={`${sliceBackground} 1280w, ${sliceBackgroundLarge} 2560w`}
           width={1280}
           height={800}
-          placeholder={sliceBackgroundPlaceholder}
           opacity={0.4}
         />
 
