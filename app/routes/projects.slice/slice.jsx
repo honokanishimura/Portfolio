@@ -45,6 +45,9 @@ function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+
+    if (typeof window === 'undefined') return;
+
     const handleResize = () => {
       setIsMobile(window.innerWidth <= breakpoint);
     };
@@ -65,6 +68,7 @@ const roles = ['PHP(Laravel)', 'SQLite'];
 export const meta = () => baseMeta({ title, description, prefix: 'Projects' });
 
 export const Slice = () => {
+  const isMobile = useIsMobile();
 
   const [isExpandedSection1, setIsExpandedSection1] = useState(false);
 const [isExpandedSection2, setIsExpandedSection2] = useState(false);
