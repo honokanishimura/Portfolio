@@ -119,22 +119,24 @@ const [isExpandedSection2, setIsExpandedSection2] = useState(false);
               viewport={{ once: true }}
             >
               <ProjectSectionHeading>Advanced Filter Logic</ProjectSectionHeading>
-
-
               <ProjectSectionText>
   {isMobile ? (
     <>
-      <p>
-        {isExpandedSection1 ? (
-          <>
-            Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page. The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access.
-            <br />
-            The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility. The click area is also wide, reducing user fatigue.
-          </>
-        ) : (
-          <>Tab-based filters allow to surface the most relevant content by selecting one industry at a time...</>
-        )}
-      </p>
+      {isExpandedSection1 ? (
+        <>
+          <p>
+            Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
+          </p>
+          <p>
+            The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access.
+            The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility.
+          </p>
+        </>
+      ) : (
+        <p>
+          Tab-based filters allow to surface the most relevant content by selecting one industry at a time...
+        </p>
+      )}
       <button
         onClick={() => setIsExpandedSection1(!isExpandedSection1)}
         style={{
@@ -153,7 +155,7 @@ const [isExpandedSection2, setIsExpandedSection2] = useState(false);
   ) : (
     <>
       <p>
-        Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page. The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access.
+        Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
       </p>
       <p>
         The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility. The click area is also wide, reducing user fatigue.
@@ -161,6 +163,10 @@ const [isExpandedSection2, setIsExpandedSection2] = useState(false);
     </>
   )}
 </ProjectSectionText>
+
+
+
+
 
 
 
@@ -206,12 +212,15 @@ const [isExpandedSection2, setIsExpandedSection2] = useState(false);
       <p>
         {isExpandedSection2 ? (
           <>
+          <p>
             This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views.
-            <br />
+          </p>
+          <p>
             Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming.
+          </p>
           </>
         ) : (
-          <>This section allows filtering by a single condition such as category or tag...</>
+          <p>This section allows filtering by a single condition such as category or tag...</p>
         )}
       </p>
       <button
