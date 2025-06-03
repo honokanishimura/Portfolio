@@ -170,6 +170,8 @@ export const SmartSparrow = () => {
       {/* Final */}
       <ProjectSection padding="none">
   <ProjectSectionContent>
+  <div style={{ paddingTop: '1.5rem' }}>
+
     <ProjectImage
 
       className="image-trim-fix"
@@ -185,6 +187,7 @@ export const SmartSparrow = () => {
       alt="A drag and drop storyboard style editor for creating an adaptive lesson."
       sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
     />
+    </div>
   </ProjectSectionContent>
 </ProjectSection>
 
