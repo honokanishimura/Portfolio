@@ -173,7 +173,7 @@ export const SmartSparrow = () => {
     <ProjectImage
 
       className="image-trim-fix"
-      style={{ paddingTop: '2rem', paddingBottom: '2rem' }} 
+      style={{ paddingTop: '1rem', paddingBottom: '1rem' }} 
 
       srcSet={
         isDark
