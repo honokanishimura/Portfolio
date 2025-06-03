@@ -170,10 +170,15 @@ export const SmartSparrow = () => {
       {/* Final */}
       <ProjectSection padding="none">
   <ProjectSectionContent>
-    <div style={{ paddingTop: '1.5rem' }}>
+    <div style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
       <img
-        className="image-trim-fix"  // 必要なクラスを適用
-        style={{ paddingTop: '1rem', paddingBottom: '1rem' }}
+        style={{
+          width: '100%',
+          maxWidth: '960px',
+          height: 'auto',
+          display: 'block',
+          margin: '0 auto',
+        }}
         srcSet={
           isDark
             ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
@@ -187,6 +192,7 @@ export const SmartSparrow = () => {
     </div>
   </ProjectSectionContent>
 </ProjectSection>
+
 
 
 

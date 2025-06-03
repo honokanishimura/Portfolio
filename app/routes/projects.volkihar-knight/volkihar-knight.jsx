@@ -211,28 +211,25 @@ export function VolkiharKnight() {
 
         <ProjectSection padding="none">
   <ProjectSectionContent>
-    {isMobile ? (
+    <div style={{ paddingTop: '1.5rem' }}>
       <img
-        className="image-trim-fix"
+
+        style={{
+          width: '100%',
+          maxWidth: '960px', // デスクトップでも巨大化させない
+          height: 'auto',
+          margin: '0 auto',
+          display: 'block',
+          paddingTop: '2rem',
+          paddingBottom: '2rem',
+        }}
         srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
         width={1280}
         height={1000}
         alt="Overview of all major UI states across the platform."
         sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
       />
-    ) : (
-      <div>
-        <img
-          className="image-trim-fix"
-          style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
-          srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
-          width={1280}
-          height={1000}
-          alt="Overview of all major UI states across the platform."
-          sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-        />
-      </div>
-    )}
+    </div>
   </ProjectSectionContent>
 </ProjectSection>
 
