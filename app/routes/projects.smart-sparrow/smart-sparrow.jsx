@@ -91,6 +91,7 @@ export const SmartSparrow = () => {
           <ProjectSectionContent>
             <ProjectImage
               className="image-trim-fix"
+              style={{ paddingTop: '6rem', paddingBottom: '2rem' }} 
               srcSet={
                 isDark
 
