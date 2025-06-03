@@ -11,6 +11,7 @@
     z-index: var(--zIndex2);
     position: relative;
     color: var(--textLight);
+    margin-top: 3rem;
   }
 
   .link {

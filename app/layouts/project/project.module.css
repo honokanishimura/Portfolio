@@ -82,7 +82,7 @@
     }
 
     @media (--mediaMobile) {
-      --sectionPadding: var(--space2XL);
+      --sectionPadding: var(--spaceXL);
     }
   }
 
@@ -336,7 +336,7 @@
     max-width: var(--maxWidthL);
     width: 100%;
     display: grid;
-    gap: var(--space4XL);
+    gap: 1.5rem !important;
 
     @media (--mediaLaptop) {
       gap: var(--space3XL);
@@ -440,7 +440,7 @@
 }
 @media screen and (max-width: 768px) {
   .sectionInner {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
   }
 }
