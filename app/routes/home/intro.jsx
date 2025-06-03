@@ -11,7 +11,7 @@ import { Suspense, lazy, useEffect, useState } from 'react';
 import { cssProps } from '~/utils/style';
 import config from '~/config.json';
 import { useHydrated } from '~/hooks/useHydrated';
-import styles from './intro.module.css';
+import styles from './module.css';
 const DisplacementSphere = lazy(() =>
   import('./displacement-sphere').then(module => ({ default: module.DisplacementSphere }))
 );
