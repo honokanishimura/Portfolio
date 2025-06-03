@@ -18,9 +18,7 @@ const ProfileText = ({ visible, titleId }) => (
 </Heading>
 
 <Text className={styles.description} data-visible={visible} size="l" as="p">
-Full-stack developer in Japan with experience in Laravel, React, and TypeScript.  
-Built an e-commerce platform using Next.js and improved mobile performance by 40%.  
-Committed to writing clean code and experienced in remote collaboration across time zones, including U.S. and Europe.
+Full-stack developer based in Japan with hands-on experience in Laravel, React, and TypeScript. Passionate about writing clean, maintainable code. Skilled in remote collaboration across multiple time zones, including teams in the U.S. and Europe.
 </Text>
 
 

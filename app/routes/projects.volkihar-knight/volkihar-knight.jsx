@@ -28,8 +28,8 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './volkihar-knight.module.css';
 
-const title = 'A CMS-type ETL management tool that supports Unirita internal operations';
-const description = 'Created a practical CMS for administrators using Laravel and MySQL';
+const title = 'CMS-Style ETL Tool for Unirita Internal Operations';
+const description = 'Created a robust CMS using Laravel and MySQL to support admin-side ETL operations';
 const roles = ['Laravel', 'MySQL', 'Enterprise UX Optimization'];
 
 function useIsMobile(breakpoint = 900) {
@@ -84,7 +84,8 @@ export function VolkiharKnight() {
               viewport={{ once: true }}
             >
               <ProjectSectionHeading className={styles.projectHeading}>
-                Member Management at Scale
+              Scalable Member Management System
+
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
                 {isMobile ? (
@@ -92,17 +93,16 @@ export function VolkiharKnight() {
                     {isExpandedSection1 ? (
                       <>
                         <p>
-                          Administrators can manage all users through a dashboard, with real-time visibility into session activity, user status, and department-specific access.
-                        </p>
+                        Admins can manage users via a central dashboard, with real-time insights into session activity, user status, and department-level permissions</p>
                         <p>
-                          By leveraging Eloquent ORM, the system ensures smooth real-time updates, staying responsive for large data sets without full page reloads.
-                          CSV-based bulk onboarding is supported, with automated column mapping and validation.
-                          Activity logs and role-based filters provide clear visibility into permission changes.
+                        By using Eloquent ORM, the system delivers responsive, real-time updates even with large datasets. No full page reloads needed! Features include CSV-based bulk onboarding, auto-mapping of columns, and permission visibility via activity logs and role filters.
+
+
                         </p>
                       </>
                     ) : (
                       <>
-                        <p>Administrators can manage all users through a dashboard, with real-time visibility into session activity...</p>
+                        <p>Admins can manage users via a central dashboard, with real-time insights into session activity,...</p>
                       </>
                     )}
                     <button
@@ -123,13 +123,12 @@ export function VolkiharKnight() {
                 ) : (
                   <>
                     <p>
-                      Administrators can manage all users through a dashboard, with real-time visibility into session activity, user status, and department-specific access.
-                    </p>
-                    <p>
-                      By leveraging Eloquent ORM, the system ensures smooth real-time updates, staying responsive for large data sets without full page reloads.
-                      CSV-based bulk onboarding is supported, with automated column mapping and validation.
-                      Activity logs and role-based filters provide clear visibility into permission changes.
-                    </p>
+                        Admins can manage users via a central dashboard, with real-time insights into session activity, user status, and department-level permissions</p>
+                        <p>
+                        By using Eloquent ORM, the system delivers responsive, real-time updates even with large datasets. No full page reloads needed! Features include CSV-based bulk onboarding, auto-mapping of columns, and permission visibility via activity logs and role filters.
+
+
+                        </p>
                   </>
                 )}
               </ProjectSectionText>
@@ -160,7 +159,8 @@ export function VolkiharKnight() {
               viewport={{ once: true }}
             >
               <ProjectSectionHeading className={styles.projectHeading}>
-                Onboarding Workflow
+              Fast Onboarding Experience
+
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
                 {isMobile ? (
@@ -168,17 +168,15 @@ export function VolkiharKnight() {
                     {isExpandedSection2 ? (
                       <>
                         <p>
-                          User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus.
-                          The system supports bulk CSV uploads, automatically matching file columns.
+                        User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus. The system supports bulk CSV uploads, automatically matching file columns.
                         </p>
                         <p>
-                          Implemented based on direct feedback, it helped uncover friction points.
-                          As a result, registration time was reduced from 6 to under 2 minutes.
+                        Implemented using direct user feedback, the system reduced onboarding time from 6 minutes to under 2.
                         </p>
                       </>
                     ) : (
                       <>
-                        <p>User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus...</p>
+                        <p>User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus....</p>
                       </>
                     )}
                     <button
@@ -198,14 +196,12 @@ export function VolkiharKnight() {
                   </>
                 ) : (
                   <>
-                    <p>
-                      User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus.
-                      The system supports bulk CSV uploads, automatically matching file columns.
-                    </p>
-                    <p>
-                      Implemented based on direct feedback, it helped uncover friction points.
-                      As a result, registration time was reduced from 6 to under 2 minutes.
-                    </p>
+                     <p>
+                        User information such as industry, department, and company structure can be quickly and accurately entered via intuitive dropdown menus. The system supports bulk CSV uploads, automatically matching file columns.
+                        </p>
+                        <p>
+                        Implemented using direct user feedback, the system reduced onboarding time from 6 minutes to under 2.
+                        </p>
                   </>
                 )}
               </ProjectSectionText>

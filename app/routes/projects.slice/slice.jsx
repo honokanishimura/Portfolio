@@ -30,9 +30,9 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './slice.module.css';
 
-const title = 'Advanced Search Filter for Business Dashboard';
-const description = 'Implemented a search filtering system in a CMS to help SMEs quickly access relevant support content';
-const roles = ['PHP(Laravel)', 'SQLite'];
+const title = 'Advanced Search Filter for Small Business Support Portal';
+const description = 'Built a CMS filtering system to help SMEs quickly locate relevant support content';
+const roles = ['PHP', 'Javascript', 'SQLite'];
 
 function useIsMobile(breakpoint = 768) {
   const [isMobile, setIsMobile] = useState(false);
@@ -84,7 +84,8 @@ export function Slice() {
               viewport={{ once: true }}
             >
               <ProjectSectionHeading className={styles.projectHeading}>
-                Advanced Filter Logic
+              Multi-Tab Filtering with Smart URLs
+
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
                 {isMobile ? (
@@ -92,14 +93,13 @@ export function Slice() {
                     {isExpandedSection1 ? (
                       <>
                         <p>
-                          Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
-                        </p>
+                        Users can filter by industry using tab-based navigation. Selecting a tab instantly refreshes content without reloading the page.</p>
                         <p>
-                          The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access. The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility.
+                        The selected tab is encoded in the URL (e.g. ?id=2), making the page easily shareable and bookmark-able.The layout is optimized for all devices, enhancing both usability and visual clarity.                        
                         </p>
                       </>
                     ) : (
-                      <p>Tab-based filters allow to surface the most relevant content by selecting one industry at a time...</p>
+                      <p>Users can filter by industry using tab-based navigation. Selecting a tab instantly refreshes content ...</p>
                     )}
                     <button
                       onClick={() => setIsExpandedSection1(!isExpandedSection1)}
@@ -119,11 +119,10 @@ export function Slice() {
                 ) : (
                   <>
                     <p>
-                      Tab-based filters allow to surface the most relevant content by selecting one industry at a time, finance, healthcare, or education. Clicking a tab instantly updates the content without having to reload the page.
-                    </p>
-                    <p>
-                      The selected tab is reflected in the URL (e.g. ?id=2), making the view easy to share and access. The layout is optimized for all devices, improving accessibility in terms of both ease of operation and visibility.
-                    </p>
+                        Users can filter by industry using tab-based navigation. Selecting a tab instantly refreshes content without reloading the page.</p>
+                        <p>
+                        The selected tab is encoded in the URL (e.g. ?id=2), making the page easily shareable and bookmark-able.The layout is optimized for all devices, enhancing both usability and visual clarity.                        
+                        </p>
                   </>
                 )}
               </ProjectSectionText>
@@ -162,14 +161,12 @@ export function Slice() {
                     {isExpandedSection2 ? (
                       <>
                         <p>
-                          This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views.
+                        Users can also filter by a single tag or category (e.g. ?tag=design).Designed with mobile-first in mind, the layout supports quick selections and reduces unnecessary scrolling or zooming.                        
                         </p>
-                        <p>
-                          Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming.
-                        </p>
+                        
                       </>
                     ) : (
-                      <p>This section allows filtering by a single condition such as category or tag...</p>
+                      <p>Users can also filter by a single tag or category (e.g. ?tag=design)...</p>
                     )}
                     <button
                       onClick={() => setIsExpandedSection2(!isExpandedSection2)}
@@ -188,12 +185,9 @@ export function Slice() {
                   </>
                 ) : (
                   <>
-                    <p>
-                      This section allows filtering by a single condition such as category or tag. Users can quickly update the displayed items by selecting one option from the list. The system reflects the selected state in the URL (e.g. ?tag=design), enabling shareable views.
-                    </p>
-                    <p>
-                      Designed with mobile-first in mind, the layout ensures easy tap targets and fluid reading experience. It minimizes the need for repeated gestures or zooming.
-                    </p>
+                     <p>
+                        Users can also filter by a single tag or category (e.g. ?tag=design).Designed with mobile-first in mind, the layout supports quick selections and reduces unnecessary scrolling or zooming.                        
+                        </p>
                   </>
                 )}
               </ProjectSectionText>

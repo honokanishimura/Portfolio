@@ -41,10 +41,10 @@ import imageSprComponentsLight from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprComponentsLightLarge from '~/assets/Hyo-ramdom-mobo.png';
 import imageSprDesignSystemDark from '~/assets/Hyo-all.png';
 
-const title = 'React-Based Furniture E-Commerce Platform';
+const title = 'Modular E-Commerce Interface Using React and TypeScript';
 
 const description =
-  'Built the flow from product list to purchase and history display using React and TypeScript';
+  'Developed the complete purchase flow, from product listing to transaction history, using React and TypeScript';
   const roles = [
     'React / TypeScript',
     'Remix / API Integration',
@@ -105,15 +105,15 @@ export const SmartSparrow = () => {
       
           <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-              Seamless Purchase Flow from Product
+              Seamless Purchase Flow Across Devices
+
+
               </ProjectSectionHeading>
 
 
               <ProjectSectionText className={styles.projectText}> 
                 <p>
-                The UI supports product selection, cart addition, and purchase history review.
-                The site provides a stress-free and straightforward user experience across all devices. 
-                It is lightweight, fast, and built as a fully functional e-commerce platform with performance and operational use in mind
+                The UI enables intuitive product selection, cart functionality, and review of purchase history. Built for speed and clarity, the platform delivers a smooth experience across both desktop and mobile
                 </p>
               </ProjectSectionText>
 
@@ -144,16 +144,18 @@ export const SmartSparrow = () => {
 
             <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
-              Creates Smooth Purchasing Flow
+              Streamlined Checkout with Cloudflare Integration
               </ProjectSectionHeading>
               <ProjectSectionText className={styles.projectText}>
                 <p>
   
-The process from purchase to history confirmation is designed to be smooth,
-and in addition to input processing and status management,
-APIs and data storage are also built in the Cloudflare environment</p>
+                The system manages user input, purchase status, and data storage using APIs integrated into the Cloudflare environment
+
+</p>
   <p>
-  A practical configuration with user registration, profile editing, and contact functions</p>
+  Includes practical features like user registration, profile editing, and contact forms
+
+</p>
 </ProjectSectionText>
 
             </div>

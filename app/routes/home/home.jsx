@@ -116,7 +116,7 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Built a Modular Shopping UI Using React and TypeScript"
+        title="React-Based Furniture E-Commerce Platform"
 
         buttonText="View project"
         buttonLink="/projects/smart-sparrow"
@@ -164,7 +164,7 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Supporting Small Business Solutions"
+        title="SME Dashboard Search Filter System"
         buttonText="View project"
         buttonLink="/projects/slice"
         model={{
