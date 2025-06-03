@@ -210,38 +210,32 @@ export function VolkiharKnight() {
         </ProjectSection>
 
         <ProjectSection padding="none">
-          <ProjectSectionContent>
-          {isMobile ? (
-  <ProjectImage
-    className="image-trim-fix"
-    srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
-    width={1280}
-    height={1000}
-    alt="Overview of all major UI states across the platform."
-    sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-  />
-) : (
-  <motion.div
-    initial={{ y: 60, opacity: 0 }}
-    whileInView={{ y: 0, opacity: 1 }}
-    transition={{ duration: 0.9, ease: 'easeOut' }}
-    viewport={{ once: true }}
-  >
-    <ProjectImage
-      className="image-trim-fix"
-      style={{ paddingTop: '2rem', paddingBottom: '2rem' }} 
+  <ProjectSectionContent>
+    {isMobile ? (
+      <img
+        className="image-trim-fix"
+        srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
+        width={1280}
+        height={1000}
+        alt="Overview of all major UI states across the platform."
+        sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+      />
+    ) : (
+      <div>
+        <img
+          className="image-trim-fix"
+          style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
+          srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
+          width={1280}
+          height={1000}
+          alt="Overview of all major UI states across the platform."
+          sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+        />
+      </div>
+    )}
+  </ProjectSectionContent>
+</ProjectSection>
 
-      srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
-      width={1280}
-      height={1000}
-      alt="Overview of all major UI states across the platform."
-      sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-    />
-  </motion.div>
-)}
-
-          </ProjectSectionContent>
-        </ProjectSection>
       </ProjectContainer>
 
       <Footer />

@@ -196,17 +196,20 @@ export function Slice() {
         </ProjectSection>
 
         <ProjectSection padding="none">
-          <ProjectSectionContent>
-            <ProjectImage
-              srcSet={`${sliceSlides} 1200w, ${sliceSlidesLarge} 1920w`}
-              width={1200}
-              height={800}
-              alt="The new My Slides tab in slice, showing annotated and favorited slides."
-              sizes="100vw"
-              className={styles.fullscreenImage}
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
+  <ProjectSectionContent>
+    <div>
+      <img
+        srcSet={`${sliceSlides} 1200w, ${sliceSlidesLarge} 1920w`}
+        width={1200}
+        height={800}
+        alt="The new My Slides tab in slice, showing annotated and favorited slides."
+        sizes="100vw"
+        className="fullscreenImage"  // ここを使えば元のスタイル継承
+      />
+    </div>
+  </ProjectSectionContent>
+</ProjectSection>
+
       </ProjectContainer>
       <Footer />
     </Fragment>

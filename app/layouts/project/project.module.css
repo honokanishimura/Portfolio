@@ -136,7 +136,7 @@
   }
 
   .backgroundImage {
-    --imageHeight: 800px;
+    --imageHeight: 600px;
 
     position: absolute;
     top: 0;

@@ -170,26 +170,24 @@ export const SmartSparrow = () => {
       {/* Final */}
       <ProjectSection padding="none">
   <ProjectSectionContent>
-  <div style={{ paddingTop: '1.5rem' }}>
-
-    <ProjectImage
-
-      className="image-trim-fix"
-      style={{ paddingTop: '1rem', paddingBottom: '1rem' }} 
-
-      srcSet={
-        isDark
-          ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
-          : `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
-      }
-      width={1280}
-      height={800}
-      alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-      sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-    />
+    <div style={{ paddingTop: '1.5rem' }}>
+      <img
+        className="image-trim-fix"  // 必要なクラスを適用
+        style={{ paddingTop: '1rem', paddingBottom: '1rem' }}
+        srcSet={
+          isDark
+            ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
+            : `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`
+        }
+        width={1280}
+        height={800}
+        alt="A drag and drop storyboard style editor for creating an adaptive lesson."
+        sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
+      />
     </div>
   </ProjectSectionContent>
 </ProjectSection>
+
 
 
       {/* Footer */}
