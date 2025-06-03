@@ -229,6 +229,8 @@ export function VolkiharKnight() {
   >
     <ProjectImage
       className="image-trim-fix"
+      style={{ paddingTop: '2rem', paddingBottom: '2rem' }} 
+
       srcSet={`${WahaAll} 1280w, ${WahaAll} 2560w`}
       width={1280}
       height={1000}
