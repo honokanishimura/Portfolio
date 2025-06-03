@@ -62,14 +62,14 @@
   background-color: #e0e0e0 !important; 
   border-radius: 0 !important;
   box-shadow: none !important;
-  margin-top: 2.5rem !important;
-  margin-bottom: 2rem !important;
+  margin-top: 4rem !important;
+  margin-bottom: 1rem !important;
   transition: opacity 0.5s ease-in-out;
 }
 
 .image-trim-fix-wide {
   display: block !important;
-  margin-bottom: 3rem !important;
+  margin-bottom: 2rem !important;
   margin: 2rem auto 3rem auto !important;
   width: 100% !important;
   max-width: 1000px !important; /* ✅ お好みで 960px～1280px くらいまで調整可 */

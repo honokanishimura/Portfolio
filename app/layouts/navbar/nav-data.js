@@ -12,8 +12,8 @@ export const navLinks = [
     pathname: '/#project-1',
   },
   {
-    label: 'Resume',
-    pathname: '/resume.pdf',
+    label: '',
+    pathname: '/.pdf',
   },
   
   {

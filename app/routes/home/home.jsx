@@ -10,7 +10,7 @@ import { Intro } from './intro';
 // Profile: Developer profile and personal summary section
 import { Profile } from './profile';
 
-// ProjectSummary: Reusable component to show featured projects with animations and image models
+// project summary
 import { ProjectSummary } from './project-summary';
 
 import { baseMeta } from '~/utils/meta';

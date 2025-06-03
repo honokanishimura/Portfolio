@@ -11,18 +11,18 @@ import { Suspense, lazy, useEffect, useState } from 'react';
 import { cssProps } from '~/utils/style';
 import config from '~/config.json';
 import { useHydrated } from '~/hooks/useHydrated';
-import styles from './intro.module.css';
+import styles from './.module.css';
 
 const DisplacementSphere = lazy(() =>
   import('./displacement-sphere').then(module => ({ default: module.DisplacementSphere }))
 );
 
-export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
+export function ({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
   const { theme } = useTheme();
   const { disciplines } = config;
   const [disciplineIndex, setDisciplineIndex] = useState(0);
   const prevTheme = usePrevious(theme);
-  const introLabel = [disciplines.slice(0, -1).join(', '), disciplines.slice(-1)[0]].join(
+  const Label = [disciplines.slice(0, -1).join(', '), disciplines.slice(-1)[0]].join(
     ', and '
   );
   const currentDiscipline = disciplines.find((item, index) => index === disciplineIndex);
@@ -52,7 +52,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
 
   return (
     <Section
-      className={styles.intro}
+      className={styles.}
       as="section"
       ref={sectionRef}
       id={id}
@@ -74,7 +74,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
               </h1>
               <Heading level={0} as="h2" className={styles.title}>
                 <VisuallyHidden className={styles.label}>
-                  {`${config.role} + ${introLabel}`}
+                  {`${config.role} + ${Label}`}
                 </VisuallyHidden>
                 <span aria-hidden className={styles.row}>
                   <span
