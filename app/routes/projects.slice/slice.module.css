@@ -33,6 +33,39 @@
 [data-theme='dark'] .projectText {
   color: #eaeaea;
 }
+.projectTextRow {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.projectHeading {
+  max-width: 960px;
+  width: 100%;
+  margin-bottom: 2rem;
+  font-size: 2.75rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .projectHeading {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .projectTextRow {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 
 
