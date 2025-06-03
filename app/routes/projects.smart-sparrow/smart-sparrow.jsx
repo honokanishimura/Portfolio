@@ -89,7 +89,7 @@ export const SmartSparrow = () => {
         {/* Section: Hero UI image (product listing) */}
         <ProjectSection padding="none">
           <ProjectSectionContent>
-          <div style={{ paddingTop: '5rem' }}>
+          <div style={{ paddingTop: '3.5rem' }}>
 
             <ProjectImage
               className="image-trim-fix"
