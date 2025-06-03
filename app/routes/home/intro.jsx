@@ -17,7 +17,7 @@ const DisplacementSphere = lazy(() =>
   import('./displacement-sphere').then(module => ({ default: module.DisplacementSphere }))
 );
 
-export function ({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
+export function IntroSection({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
   const { theme } = useTheme();
   const { disciplines } = config;
   const [disciplineIndex, setDisciplineIndex] = useState(0);
@@ -52,7 +52,7 @@ export function ({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
 
   return (
     <Section
-      className={styles.}
+      className={styles.intro}
       as="section"
       ref={sectionRef}
       id={id}
