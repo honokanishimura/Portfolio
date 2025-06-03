@@ -144,3 +144,9 @@
     margin-bottom: 1.5rem !important;
   }
 }
+
+.no-animation {
+  transform: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+}

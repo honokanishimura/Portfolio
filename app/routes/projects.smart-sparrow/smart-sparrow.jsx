@@ -89,6 +89,8 @@ export const SmartSparrow = () => {
         {/* Section: Hero UI image (product listing) */}
         <ProjectSection padding="none">
           <ProjectSectionContent>
+          <div style={{ paddingTop: '5rem' }}>
+
             <ProjectImage
               className="image-trim-fix"
               style={{ paddingTop: '6rem', paddingBottom: '2rem' }} 
@@ -103,6 +105,7 @@ export const SmartSparrow = () => {
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
               alt="Furniture product UI"
             />
+          </div>
       
           <div className={`${styles.projectTextRow} ${styles.accountTextBlock}`}>
               <ProjectSectionHeading className={styles.projectHeading}>
@@ -168,7 +171,7 @@ export const SmartSparrow = () => {
       <ProjectSection padding="none">
   <ProjectSectionContent>
     <ProjectImage
-      className="image-trim-fix"
+      className="no-animation"
       srcSet={
         isDark
           ? `${imageSprDesignSystemDark} 1280w, ${imageSprDesignSystemDark} 2560w`

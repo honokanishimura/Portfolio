@@ -327,7 +327,7 @@
   .image {
     position: relative;
     display: grid;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 3rem, 0);
     max-width: 100%;
     width: 100%;
   }
