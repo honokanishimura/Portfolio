@@ -118,3 +118,29 @@
     max-width: 100% !important;
   }
 }
+
+
+/* ✅ スマホ・デスクトップ問わず画像の上下にしっかり余白を追加 */
+.image-trim-fix {
+  margin-top: 4rem !important;
+  margin-bottom: 3rem !important;
+}
+
+/* ✅ コンポーネント内部のラッパーにも余白を追加（Cloudflare環境で必須） */
+.image-trim-fix > div {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+}
+
+/* ✅ モバイル表示用の補強（念のため） */
+@media (max-width: 768px) {
+  .image-trim-fix {
+    margin-top: 3rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  .image-trim-fix > div {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+}
