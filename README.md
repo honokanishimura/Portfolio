@@ -1,9 +1,13 @@
 # Honoka Nishimura – Developer Portfolio
 
-This is my personal developer portfolio built with **Remix**, showcasing selected frontend and full-stack development projects.
+- This is my personal developer portfolio (https://honoka-dvt.pages.dev/), built with **React**, **TypeScript**, and **Tailwind CSS**, reflecting my passion for clean UI/UX and modern frontend architecture.
+- The layout and animation were built from scratch using modern tools to ensure a high level of interactivity and responsiveness.
 
-The site highlights my experience in React, Laravel, and TypeScript through real-world inspired applications and design briefs.  
-The layout and animation were built from scratch using modern tools to ensure a high level of interactivity and responsiveness.
+## About
+
+- I'm a full-stack developer based in Japan with 1.5 years of experience in **PHP (Laravel)**, **React**, and **TypeScript**.  
+- Open to fully remote roles with teams in the U.S., Europe, or other flexible time zones.
+
 
 ---
 
@@ -46,13 +50,6 @@ The layout and animation were built from scratch using modern tools to ensure a 
 - UI support and improvements for a Japanese SME-targeted SaaS platform
 - Focused on improving information architecture and interface clarity
 
----
-
-## About
-
-I’m a full-stack developer based in Japan with hands-on experience in **PHP (Laravel)**, **React**, and **TypeScript**.  
-My recent focus has been on building interactive UIs and scalable backend systems using Remix, Next.js, and server-side rendering.  
-Open to fully remote roles across U.S., European, or flexible time zones.
 
 ---
 
