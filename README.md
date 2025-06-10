@@ -16,19 +16,19 @@
 [https://honoka-dvt.pages.dev](https://honoka-dvt.pages.dev)
 
 ---
+## Screenshots
 
-### Screenshots
 
 ### 🖥️ Top Page (Hero)
 ![portfolio1](./app/assets/portfolio1.png)
 
-### E-Commerce Project
+### 🛒 E-Commerce Project
 ![portfolio2](./app/assets/portfolio2.png)
 
-### SME Search Filter
+### 🧩 SME Search Filter
 ![portfolio3](./app/assets/portfolio3.png)
 
-### No-Code ETL Tool
+### 🔧 No-Code ETL Tool
 ![portfolio4](./app/assets/portfolio4.png)
 
 ### 👩‍💻 About Me Section
