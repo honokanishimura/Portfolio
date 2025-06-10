@@ -13,8 +13,22 @@ The layout and animation were built from scratch using modern tools to ensure a 
 
 ---
 
-### Top Page (Hero and Categories)
-![portfolio](https://github.com/user-attachments/assets/5c3b8327-8851-4a6f-a69c-f38d98456824)
+### Screenshots
+
+### 🖥️ Top Page (Hero)
+![portfolio1](./app/assets/portfolio1.png)
+
+### E-Commerce Project
+![portfolio2](./app/assets/portfolio2.png)
+
+### SME Search Filter
+![portfolio3](./app/assets/portfolio3.png)
+
+### No-Code ETL Tool
+![portfolio4](./app/assets/portfolio4.png)
+
+### 👩‍💻 About Me Section
+![portfolio5](./app/assets/portfolio5.png)
 
 ## Featured Projects
 
