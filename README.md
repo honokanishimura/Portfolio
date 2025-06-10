@@ -15,9 +15,6 @@
 
 [https://honoka-dvt.pages.dev](https://honoka-dvt.pages.dev)
 
----
-## Screenshots
-
 
 ### 🖥️ Top Page (Hero)
 ![portfolio1](./app/assets/portfolio1.png)
@@ -33,6 +30,7 @@
 
 ### 👩‍💻 About Me Section
 ![portfolio5](./app/assets/portfolio5.png)
+
 
 ## Featured Projects
 
@@ -64,7 +62,6 @@
 | Backend       | Laravel (MySQL, SQLite + FTS5), Cloudflare D1                |
 | Deployment    | Cloudflare Pages + Functions                                 |
 
----
 
 ## Getting Started
 
@@ -72,11 +69,3 @@ Install dependencies:
 
 ```bash
 npm install
-
-Run the development server:
-
-npm run dev
-
-Deploy to Cloudflare Pages:
-
-npm run deploy
