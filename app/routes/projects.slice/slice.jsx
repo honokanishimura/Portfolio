@@ -69,7 +69,7 @@ export function Slice() {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://biz.service.ntt-east.co.jp/"
+          url="https://biz.service.ntt-east.co.jp/case/"
           roles={roles}
         />
 
