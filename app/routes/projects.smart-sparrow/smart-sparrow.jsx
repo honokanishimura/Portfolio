@@ -82,7 +82,7 @@ export const SmartSparrow = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://furniture-app.pages.dev/"
+          url="https://typescript1.pages.dev/"
           roles={roles}
         />
 
