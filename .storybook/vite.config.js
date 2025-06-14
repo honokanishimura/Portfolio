@@ -8,5 +8,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [jsconfigPaths(), react()],
+    base: './',
+    build: {
+      outDir: 'build/client', // ←★追加する
+    },
   };
 });
