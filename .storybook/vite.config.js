@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
     plugins: [jsconfigPaths(), react()],
     base: './',
     build: {
-      outDir: 'build/client', // ←★追加する
+      outDir: 'build', // ←★追加する
     },
   };
 });
